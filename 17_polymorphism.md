@@ -24,6 +24,8 @@ A dispatch function, `greeting` in this case, is called first, then the right me
 (defmulti greeting
   "The multimethod greeting"
   ;; dispatch depends on the key "language"
+  ;; the param is a map, which can be considered a function and the 
+  ;; argument given is "language"
   (fn [x] (x "language")))
 ;; lots of greeting here, so ad hoc polymorphism
 (defmethod greeting "English"  []
