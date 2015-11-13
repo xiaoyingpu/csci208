@@ -24,14 +24,14 @@ A dispatch function, `greeting` in this case, is called first, then the right me
 (defmulti greeting
   "The multimethod greeting"
   ;; dispatch depends on the key "language"
-  (fn x () (x "language")))
+  (fn [x] (x "language")))
 ;; lots of greeting here, so ad hoc polymorphism
-(defmethod greeting "English"  ()
+(defmethod greeting "English"  []
   "Returns the appropriete greeting"
   "Hello!")
-(defmethod greeting "Deutsch"  ()
+(defmethod greeting "Deutsch"  []
   "Hallo!")
-(defmethod greeting :default params ()
+(defmethod greeting :default params []
   (throw (IllegalArgumentException.
   (str "Kein " (params "language")))))
 
@@ -39,9 +39,9 @@ A dispatch function, `greeting` in this case, is called first, then the right me
 ;; defining maps here
 ;; the combination "language": "English"
 ;; makes the dispatcher calls the appropriate method
-(def english-map "id" "1" "language" "English")
-(def deutsch-map "id" "1" "language" "Deutsch")
-(def espano-map "id" "3" "language" "Espano")
+(def english-map { "id" "1" "language" "English"})
+(def deutsch-map {"id" "2" "language" "Deutsch"})
+(def espano-map {"id" "3" "language" "Espano"})
 ```
 Output:
 ```clojure
@@ -53,4 +53,4 @@ clojure-noob.core/eval3459/fn--3460 (core.clj:27)
 ```
 
 
-Also see: [8thlight](https://blog.8thlight.com/myles-megyesi/2012/04/26/polymorphism-in-clojure.html)
+Also see: [8thlight](https://blog.8thlight.com/myles-megyesi/2012/04/26/polymorphism-in-clojure.html), [clojuredoc](https://clojuredocs.org/clojure.core/defmulti)
