@@ -28,12 +28,12 @@ A dispatch function, `greeting` in this case, is called first, then the right me
   ;; argument given is "language"
   (fn [x] (x "language")))
 ;; lots of greeting here, so ad hoc polymorphism
-(defmethod greeting "English"  []
+(defmethod greeting "English"  [_]
   "Returns the appropriete greeting"
   "Hello!")
-(defmethod greeting "Deutsch"  []
+(defmethod greeting "Deutsch"  [_]
   "Hallo!")
-(defmethod greeting :default params []
+(defmethod greeting :default params [_]
   (throw (IllegalArgumentException.
   (str "Kein " (params "language")))))
 
