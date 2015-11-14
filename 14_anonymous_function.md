@@ -1,7 +1,7 @@
 
 # 14. Anonymous functions
 
-As a functional language, Clojure uses a special form to build anonymous, or unnamed, functions \cite{fogus2014joy}. There is also a reader feature to define in-place functions using `#()`.
+As a functional language, Clojure uses a special form to build anonymous, or unnamed, functions ([@fogus2014joy]). 
 
 ```clojure
 ;; This function has no name
@@ -13,8 +13,10 @@ Output
 
 ```
 6                       ;; return value
-;; ... which is the same as using #()
-(#(* 3 %) 2)  
+```
+There is also a reader feature to define in-place functions using `#()`.
+```
+usr> (#(* 3 %) 2)  
 ;; The % implicitly declares the accepted argument
 ```
-Adapted from \cite{koan} and \cite{fogus2014joy}.
+Adapted from [@koan] and [@fogus2014joy].
