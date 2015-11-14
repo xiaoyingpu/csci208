@@ -54,7 +54,8 @@ Inspired by CSCI 208 class notes; see [stackoverflow](http://stackoverflow.com/q
 
 ## List comprehension
 
-
 ```clojure
-
+;; (range) still does the trick
+user> (take 4 (for [x (range)] (* x x)))
+(0 1 4 9)
 ```
