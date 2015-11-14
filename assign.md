@@ -1274,53 +1274,6 @@ See[^14]\
 
 \
 
-In Clojure, operators are plain functions @fogus2014joy (p. 13).
-Overloading is possible for both methods and operators. In practise, it
-is better to use multimethods than simply overloading functions,
-especially basic operators like +[^15].
-
-<span>|p<span>0.8</span>|</span>
-
-``` {.clj}
-;; attempt to overload + operator
-user> (defn + [x] 0)
-;; compiler gives a warning
-WARNING: + already refers to: #'clojure.core/+ in 
-namespace: user, being replaced by: #'user/+
-#'user/+
-;; but the evil definition is used anyways
-user> (+ 3)
-0
-;; what an awful thing to do
-```
-
-\
-My humble concoction\
-
-Clojure also comes with overloaded methods. Clojure does arity
-overloading within a single function definition. Below is a snippet of
-the source code for + operator in clojure.core
-
-<span>|p<span>0.98</span>|</span>
-
-``` {.clj}
-(defn +
-  "Returns the sum of nums. (+) returns 0. Does not auto-promote
-  longs, will throw on overflow. See also: +'"
-  {:inline (nary-inline 'add 'unchecked_add)
-   :inline-arities >1?
-   :added "1.2"}
-  ([] 0)            ; no argument
-  ([x] (cast Number x)) ; one argument
-  ([x y] (. clojure.lang.Numbers (add x y))) ; 2
-  ([x y & more]                              ; or more
-     (reduce1 + (+ x y) more)))
-```
-
-\
-From
-<https://github.com/clojure/clojure/blob/master/src/clj/clojure/core.clj>\
-
 **49. What are the regular expressions for its tokens? (Give a regular
 expression to describe each category of literals - integers, booleans,
 etc).**
