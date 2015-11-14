@@ -9,18 +9,21 @@ We covered three types of polymorphism:
 3. parametric polymorphism
 
 
-## Inclusion
+## Inclusion / Subclass / Subtype / Inheritance
 
 Clojure allows inheritance relationships among data types or even among symbols [@fogus2014joy]. `defrecord` defines a Cartesian product (class), and `defprotocol` defines Java's equivalence of a interface, without implementation.
 
 ```clojure
-(defprotocol Walkable [name]
+;; defprotocol does not define class members like name
+(defprotocol Walkable
   (walk [this]))
-
+;; Walkable -> Human
 (defrecord Human [name]
+  ;; Java equiv of implements Walkable
   Walkable
+  ;; defining the concrete method
   (walk [this] "Human walks"))
-
+;; Walkable -> Dog
 (defrecord Dog [name]
   Walkable
   (walk [this] "Woof"))
