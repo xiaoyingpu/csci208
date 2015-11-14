@@ -899,33 +899,6 @@ Consequently, Clojure is very portable because JVM is; portability is
 one of the key features of Clojure. Besides JVM, Clojure can also be
 hosted on CLR (Common Language Runtime) and JavaScript.
 
-**Phase 5: Infinite Lists**
-
-------------------------------------------------------------------------
-
-\
-
-Yes Clojure has those. With lazy evaluation, one is encouraged to `take`
-a finite number of items from the infinite list without breaking the
-universe.
-
-<span>|p<span>0.8</span>|</span>
-
-``` {.clj}
-;; (range) returns a lazy sequence,
-;; staring from the default 0 to infinity
-;; Run this and see what infinity means
-usr => (println (range))
-;; or, just take the first two in the coll
-usr => (take 2 (range))
-(0 1)
-```
-
-\
-To run: in Emacs, `M-x`, select cider-jack-in to start REPL\
-Enter code at the prompt.\
-For using cider in Emacs, see @brave2015\
-Definitions adapted from @empty @fogus2014joy (Ch.6.3.4).\
 
 Phase 6: Dynamic typing, scope & regex
 ======================================
