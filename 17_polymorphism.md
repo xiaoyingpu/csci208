@@ -93,7 +93,7 @@ Functions that can be applied on different types. Clojure has it.
 
 
 ```clojure
-;; map
+;; map, returns the first key-value pair
 user> (head {:a "a", :b "b"})
 [:a "a"]
 ;; vector
