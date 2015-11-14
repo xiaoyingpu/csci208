@@ -1,4 +1,4 @@
-## 10. evaluation strategy
+# 10. evaluation strategy
 
 Clojure is partly a lazy language [@fogus2014joy].
 
@@ -17,7 +17,37 @@ When dealing with sequence types, Clojure uses lazy evaluation. For instance, Cl
 
 ```clojure
 ;; (range) is a sequence of 0 to infinite int's
+;; it did not compute the entire list
 usr=> (take 2 (range))
 ;; universe is still intact because Clojure is lazy
 (0 1)
 ```
+
+## Example with side-effect to show lazy-evaluation
+
+Try:
+```clojure
+;; a is immutable
+(def a 3)
+
+(defn sqr [x]
+  (println "sqr")
+  (* x x))
+
+(defn tri [x]
+  (println "tri")
+  (+ x x x))
+
+(defn main []
+  (sqr (tri a)))
+```
+
+Output:
+
+```clojure
+user> (main)
+tri
+sqr
+81
+```
+If clojure used call-by-name, then Clojure would have printed two `tri`'s because function `tri` should be called twice on the line `(* x x)`. (Clojure data is basically immutable, so there is no eazy way to increment that global `a`.)
