@@ -10,11 +10,11 @@
 
 ## Answers
 
--   Clojure was created by Rich Hickey (@ric) in 2007[^2]. It took Hickey about two years to write it before the initial release (see [his github page](https://github.com/clojure/clojure/commits/1.0.x?page=30)).
+-   Clojure was created by Rich Hickey (@richhickey) in 2007[^2]. It took Hickey about two years to write it before the initial release (see [his github page](https://github.com/clojure/clojure/commits/1.0.x?page=30)).
 
 -   Clojure compiles down to Java bytecode [see a video of Hickey's](https://www.youtube.com/watch?v=P76Vbsk_3J0&index=4&list=WL).
 
--   Built from Hickey’s personal revelations in working as a software engineer, Clojure was created to be the following because C++ / C\# / Java are not good enough[^4].
+-   Built from Hickey’s personal revelations in working as a software engineer, Clojure was created to be the following because C++ / C\# / Java are not good enough (see clojure's rationale](http://clojure.org/rationale).
 
     -   A functional language, especially Lisp-like.
 
