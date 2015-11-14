@@ -9,39 +9,12 @@ We covered three types of polymorphism:
 3. parametric polymorphism
 
 
-## Inclusion / Subclass / Subtype / Inheritance
 
-Clojure allows inheritance relationships among data types or even among symbols [@fogus2014joy]. `defrecord` defines a Cartesian product (class), and `defprotocol` defines Java's equivalence of a interface, without implementation.
+-------
 
-```clojure
-;; defprotocol does not define class members like name
-(defprotocol Walkable
-  (walk [this]))
-;; Walkable -> Human
-(defrecord Human [name]
-  ;; Java equiv of implements Walkable
-  Walkable
-  ;; defining the concrete method
-  (walk [this] "Human walks"))
-;; Walkable -> Dog
-(defrecord Dog [name]
-  Walkable
-  (walk [this] "Woof"))
-```
+## Ad hoc / Overloading
 
-Output:
-
-```clojure
-user> (walk (Dog. "name"))
-"Woof"
-user> (walk (Human. "the killers"))
-"Human walks"
-```
-
-
-## Ad hoc
-
-A dispatch function, `greeting` in this case, is called first, then the right method is called  based on the dispatch value.
+Many functions, same name. In Clojure, a dispatch function, `greeting` in this case, is called first, then the right method is called  based on the dispatch value.
 
 ```clojure
 ;; greeting is a dispatch function 
@@ -77,6 +50,38 @@ clojure-noob.core> (greeting espano-map)
 IllegalArgumentException Kein Espano 
 clojure-noob.core/eval3459/fn--3460 (core.clj:27)
 ```
+
+## Inclusion / Subclass / Subtype / Inheritance
+
+Clojure allows inheritance relationships among data types or even among symbols [@fogus2014joy]. `defrecord` defines a Cartesian product (class), and `defprotocol` defines Java's equivalence of a interface, without implementation.
+
+```clojure
+;; defprotocol does not define class members like name
+(defprotocol Walkable
+  (walk [this]))
+;; Walkable -> Human
+(defrecord Human [name]
+  ;; Java equiv of implements Walkable
+  Walkable
+  ;; defining the concrete method
+  (walk [this] "Human walks"))
+;; Walkable -> Dog
+(defrecord Dog [name]
+  Walkable
+  (walk [this] "Woof"))
+```
+
+Output:
+
+```clojure
+user> (walk (Dog. "name"))
+"Woof"
+user> (walk (Human. "the killers"))
+"Human walks"
+```
+
+
+
 
 
 Also see: [8thlight](https://blog.8thlight.com/myles-megyesi/2012/04/26/polymorphism-in-clojure.html), [clojuredoc](https://clojuredocs.org/clojure.core/defmulti)
