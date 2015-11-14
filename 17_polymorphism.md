@@ -10,8 +10,6 @@ We covered three types of polymorphism:
 
 
 
--------
-
 ## Ad hoc / Overloading
 
 Many functions, same name. In Clojure, a dispatch function, `greeting` in this case, is called first, then the right method is called  based on the dispatch value.
@@ -84,4 +82,4 @@ user> (walk (Human. "the killers"))
 
 
 
-Also see: [8thlight](https://blog.8thlight.com/myles-megyesi/2012/04/26/polymorphism-in-clojure.html), [clojuredoc](https://clojuredocs.org/clojure.core/defmulti)
+Also see: [8thlight](https://blog.8thlight.com/myles-megyesi/2012/04/26/polymorphism-in-clojure.html), [clojuredoc/defmulti](https://clojuredocs.org/clojure.core/defmulti), [clojuredoc/defprotocol](https://clojuredocs.org/clojure.core/defprotocol).
