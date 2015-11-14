@@ -11,7 +11,7 @@ We talk about three flavors of infinity:
 2. stream
 3. list comprehension
 
-## `(range)`
+## (range)
 ```clojure
 ;; (range) returns a lazy sequence,
 ;; staring from the default 0 to infinity
@@ -23,6 +23,7 @@ usr => (take 2 (range))
 ;; starting infinity from i
 usr => #(drop % (range))
 ```
+See [clojuredoc](https://clojuredocs.org/clojure.core/range)
 
 ## Stream
 
