@@ -1,4 +1,4 @@
-## 10. evaluation strategy
+# 10. evaluation strategy
 
 Clojure is partly a lazy language [@fogus2014joy].
 
@@ -22,3 +22,5 @@ usr=> (take 2 (range))
 ;; universe is still intact because Clojure is lazy
 (0 1)
 ```
+
+## Example with side-effect to show lazy-evaluation
