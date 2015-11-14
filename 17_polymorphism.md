@@ -78,8 +78,30 @@ user> (walk (Human. "the killers"))
 "Human walks"
 ```
 
+## Parametric Polymorphism
+
+Functions that can be applied on different types. Clojure has it.
+
+```clojure
+(defn head
+ "clojure collection methods are 
+  excellent examples of parametric functions"
+  [coll]
+   ;; returns head of the coll.
+   (first coll))
+```
 
 
-
+```clojure
+;; map
+user> (head {:a "a", :b "b"})
+[:a "a"]
+;; vector
+user> (head [1,2,3])
+1
+;; list
+user> (head `(1 2 3))
+1
+```
 
 Also see: [8thlight](https://blog.8thlight.com/myles-megyesi/2012/04/26/polymorphism-in-clojure.html), [clojuredoc/defmulti](https://clojuredocs.org/clojure.core/defmulti), [clojuredoc/defprotocol](https://clojuredocs.org/clojure.core/defprotocol).
