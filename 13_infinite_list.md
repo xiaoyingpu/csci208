@@ -29,7 +29,9 @@ usr => #(drop % (range))
 Stream is a function that returns an infinite list. 
 
 ```clojure
+;; the recursive calls go on forever
 (defn fib [m n]
+  ;; need to tell clojure to be lazy about this
   (cons m (lazy-seq (fib n (+ m n)))))
 
 (defn fibs []
@@ -45,4 +47,4 @@ user> (take 8 (fibs))
 
 To run: in Emacs, `M-x`, select `cider-jack-in` to start REPL. For using cider in Emacs, see @brave2015.
 
-Inspired by CSCI 208 class notes.
+Inspired by CSCI 208 class notes; see [stackoverflow](http://stackoverflow.com/questions/4992298/clojure-lazy-sequence-usage) for usage of `lazy-seq`.
