@@ -17,6 +17,7 @@ When dealing with sequence types, Clojure uses lazy evaluation. For instance, Cl
 
 ```clojure
 ;; (range) is a sequence of 0 to infinite int's
+;; it did not compute the entire list
 usr=> (take 2 (range))
 ;; universe is still intact because Clojure is lazy
 (0 1)
