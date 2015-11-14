@@ -76,7 +76,7 @@ user=> ((comp - /) -84 2)
 ;; =============== partial ================
 ;; Partial returns a fn: "4" + ?
 ;; then fn found its other arg to be "2"
-;; very nice
+;; In Haskell you get the currying for free tho.
 user=> ((partial str "4") "2")
 "42"
 
@@ -86,4 +86,4 @@ user=> (filter (complement odd?) (range 41 43))
 (42)
 ```
 
-Definitions adapted from [clojuredoc](https://clojuredocs.org)
+Definitions adapted from [clojuredoc](https://clojuredocs.org).
