@@ -58,7 +58,7 @@ time @rathore2011clojure.
 -   Clojure is compiled, but REPL automatically “compiles to JVM bycode
     on the fly” @clojuredyn.
 
-**Functional programming**\
+**Functional programming**
 
 According to the textbook, a functional language is based on functions
 over types such as lists and trees. Clojure is a dialect of Lisp, a
@@ -92,7 +92,7 @@ but not limited to, the following characteristics:
     <span>*while*</span> loop is different from imperative languages
     with changing states @clojurefn.
 
-**Beyond Object-oriented**\
+**Beyond Object-oriented**
 
 Imperative programming views everything as object with mutable states;
 in comparison, Clojure sees the world in terms of time, state and
@@ -118,7 +118,7 @@ immutability features. @fogus2014joy.
     enhances levels of abstraction. Clojure accomplishes encapsulation
     by immutability, closures and name spaces @relevance.
 
-**Concurrent programming**\
+**Concurrent programming**
 
 Concurrency is easy to implement with Clojure. Since Clojure runs on
 JVM, it uses JVM threads. Clojure has language-level support for safe
@@ -194,7 +194,7 @@ Clojure’s scalar literals include:
 
 -   Regular expressions
 
-**Numbers**\
+**Numbers**
 
 Clojure by defaults stores integers as Long, and floating point numbers
 as Double. Clojure can intelligently uses `java.lang``.BigInteger` and
@@ -270,7 +270,7 @@ To run: in Emacs, `M-x`, select cider-jack-in\
 Then do `C-c C-k` to compile the current buffer\
 For using cider in Emacs, see @brave2015\
 
-**Characters**\
+**Characters**
 
 Clojure character literals are denoted by a backslash prefix
 @fogus2014joy. They are stored as Java characters, and Unicode
@@ -296,7 +296,7 @@ Enter code at the prompt.\
 For using cider in Emacs, see @brave2015\
 From @fogus2014joy.\
 
-**String**\
+**String**
 
 Clojure strings are java strings. See comments in the code example for
 caveats in REPL environment.
@@ -341,7 +341,7 @@ Create a clj file and `C-c M-n` to switch to current namespace,
 For using cider in Emacs, see @brave2015\
 From @fogus2014joy.\
 
-**Boolean**\
+**Boolean**
 
 Java’s true and false; they are not capitalized, nor are they
 represented by integers. Interestingly, Oracle documentation suggests
@@ -364,7 +364,7 @@ Enter code at the prompt.\
 For using cider in Emacs, see @brave2015\
 From @rathore2011clojure.\
 
-**nil**\
+**nil**
 
 The famous null in Java. Logically equivalent to false. Some properties
 are shown below in the code example.
@@ -387,7 +387,7 @@ Enter code at the prompt.\
 For using cider in Emacs, see @brave2015\
 From @rathore2011clojure.\
 
-**Symbols**\
+**Symbols**
 
 Symbols are objects that are often evaluated into something else
 @fogus2014joy.
@@ -413,7 +413,7 @@ Enter code at the prompt.\
 For using cider in Emacs, see @brave2015\
 Adapted from @fogus2014joy.\
 
-**Keyword**\
+**Keyword**
 
 A keyword is similar to symbol, but a keyword evaluates to itself.
 Keywords are fare more commonly used than symbols @fogus2014joy.
@@ -441,7 +441,7 @@ Enter code at the prompt.\
 For using cider in Emacs, see @brave2015\
 Adapted from @fogus2014joy.\
 
-**Regular expressions**\
+**Regular expressions**
 
 In Clojure, a regular expressions is a string prefixed with a hashtag
 @rathore2011clojure. Although the usage of regular expression is far
@@ -476,7 +476,7 @@ and lecture do they each match? (record, cartesian product, array, union
 make? Give an example program using each of these type
 constructors?*</span>
 
-**Answers**\
+**Answers**
 
 Collections are very important Clojure composite types. Clojure
 collections are all immutable. The elements in some collections can be
@@ -491,7 +491,7 @@ basic collection types:
 
 -   Sets
 
-**Lists**\
+**Lists**
 
 Fun fact: the name Lisp comes from list processing @fogus2014joy.
 
@@ -552,7 +552,7 @@ Enter code at the prompt.\
 For using cider in Emacs, see @brave2015\
 See @fogus2014joy and @empty.\
 
-**Vectors**\
+**Vectors**
 
 Clojure vectors belong to mapping, since there is a correspondence from
 type integer (indices) to vector elements, which can assume any type
@@ -607,7 +607,7 @@ Enter code at the prompt.\
 For using cider in Emacs, see @brave2015\
 See @fogus2014joy, @rathore2011clojure and @empty.\
 
-**Maps**\
+**Maps**
 
 Map is, by name, a kind of mapping. An element in a map consists of a
 key-value pair @fogus2014joy. Clojure’s map can have any type for both
@@ -668,7 +668,7 @@ Enter code at the prompt.\
 For using cider in Emacs, see @brave2015\
 Adapted from @fogus2014joy and @empty.\
 
-**Cartesian Products**\
+**Cartesian Products**
 
 \
 
@@ -755,7 +755,7 @@ A higher order function is defined such that it takes functions as
 arguments, and / or it returns a function as a result @fogus2014joy (Ch.
 7.1.2).
 
-**Functions as arguments**\
+**Functions as arguments**
 
 There are three important high order functions in Clojure @fogus2014joy
 (Ch 6.3.4).
@@ -809,7 +809,7 @@ Enter code at the prompt.\
 For using cider in Emacs, see @brave2015\
 Adapted from @empty.\
 
-**Functions as return values**\
+**Functions as return values**
 
 Clojure has three important functions in this category @fogus2014joy:
 
@@ -983,7 +983,7 @@ To run: in Emacs, `M-x`, select cider-jack-in to start REPL\
 Enter code at the prompt.\
 For using cider in Emacs, see @brave2015\
 
-**8. static and/or dynamic scope.**\
+**8. static and/or dynamic scope.**
 
 Clojure supports both static and dynamic scopes @fogus2014joy.
 
@@ -1044,7 +1044,7 @@ usr => (println x)
 \
 From @binding and @empty (Ch.10.6).\
 
-**9. parameter passing mechanisms**\
+**9. parameter passing mechanisms**
 
 Like Java, Clojure passes arguments by value; in the case of references,
 they are passed by references pointing to objects @pass. One way to test
@@ -1069,7 +1069,7 @@ true
 \
 A humble concoction of mine.\
 
-**11. built in list comprehensions**\
+**11. built in list comprehensions**
 
 Yes Clojure has list comprehensions, with macro `for` @empty.
 
@@ -1091,7 +1091,7 @@ See @empty.\
 Regular expression is one of the atomic data types in Clojure, as
 illustrated in Section \[rex\]. Clojure uses Java’s java.util.regex.
 
-**10. evaluation strategy**\
+**10. evaluation strategy**
 
 Clojure is partly a lazy language @fogus2014joy.
 
@@ -1350,7 +1350,7 @@ From
 
 **49. What are the regular expressions for its tokens? (Give a regular
 expression to describe each category of literals - integers, booleans,
-etc).**\
+etc).**
 
 <span>|p<span>0.98</span>|</span>
 
