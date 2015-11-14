@@ -11,9 +11,30 @@ We covered three types of polymorphism:
 
 ## Inclusion
 
-TODO: really?
+Clojure allows inheritance relationships among data types or even among symbols [@fogus2014joy]. `defrecord` defines a Cartesian product (class), and `defprotocol` defines Java's equivalence of a interface, without implementation.
 
-Clojure allows inheritance relationships among data types or even among symbols [@fogus2014joy].
+```clojure
+(defprotocol Walkable [name]
+  (walk [this]))
+
+(defrecord Human [name]
+  Walkable
+  (walk [this] "Human walks"))
+
+(defrecord Dog [name]
+  Walkable
+  (walk [this] "Woof"))
+```
+
+Output:
+
+```clojure
+user> (walk (Dog. "name"))
+"Woof"
+user> (walk (Human. "the killers"))
+"Human walks"
+```
+
 
 ## Ad hoc
 
