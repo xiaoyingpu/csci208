@@ -1,4 +1,4 @@
-![For the brave and true<span data-label="fig:my_label"></span>](c)
+![For the brave and true<span data-label="fig:my_label"></span>](http://clojure.org/file/view/clojure-icon.gif)
 
 Hello World
 ===========
