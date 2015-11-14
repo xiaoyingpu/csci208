@@ -1,3 +1,5 @@
-# bucknell/csci208
+# Answers to Clojure
 
-Semester-long project: pick up a new language and answer questions.
+`bucknell/csci208`
+
+A semester-long project: pick up a new language and answer questions.
