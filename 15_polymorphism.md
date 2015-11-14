@@ -1,4 +1,4 @@
-# 15 polymorphism. Most languages have some support for this. Haskell has a ton of it. 
+# 15. polymorphism. Most languages have some support for this. Haskell has a ton of it. 
 
 Answer: Clojure has a ton of it, too.
 
