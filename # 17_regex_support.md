@@ -10,7 +10,7 @@ java.util.regex.Pattern
 ```
 
 TODO
-* Design decision clojure took: * eager / non-eager?
+_Design decision clojure took:_  eager / non-eager?
 
 
 There are mainly four things we do with regular expressions:
