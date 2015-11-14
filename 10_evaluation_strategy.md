@@ -24,3 +24,30 @@ usr=> (take 2 (range))
 ```
 
 ## Example with side-effect to show lazy-evaluation
+
+Try:
+```clojure
+;; a is immutable
+(def a 3)
+
+(defn sqr [x]
+  (println "sqr")
+  (* x x))
+
+(defn tri [x]
+  (println "tri")
+  (+ x x x))
+
+(defn main []
+  (sqr (tri a)))
+```
+
+Output:
+
+```clojure
+user> (main)
+tri
+sqr
+81
+```
+If not lazy, then Clojure would have printed two `tri`'s because function `tri` should be called twice on the line `(* x x)`. (Clojure data is basically immutable, so there is no eazy way to increment that global `a`.)
