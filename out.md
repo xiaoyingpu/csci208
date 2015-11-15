@@ -1052,10 +1052,7 @@ true
 
 See[12]
 
-41. Does it differentiate between/allow use of statements or expressions?
--------------------------------------------------------------------------
 
-Clojure only uses expressions; no statement exists in Clojure[13].
 
 43. Does it use infix, prefix, postfix, mixfix operators? function calls? some combo of them?
 ---------------------------------------------------------------------------------------------
@@ -1253,7 +1250,6 @@ Adapted from
 
 [12] <http://stackoverflow.com/questions/8190417/does-clojure-have-short-circuit-logic>
 
-[13] http://clojure.org/evaluation
 
 [14] []()
 
