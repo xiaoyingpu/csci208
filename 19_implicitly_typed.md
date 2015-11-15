@@ -22,6 +22,18 @@ user> (defn foo [x] (+ 2 x))
 
 Clojure does allow type hints, which are not required. Type hints are useful for improving performance. 
 
+```clojure
+(defn length
+  [^String s]
+  (.length s ))
+```
 
-See 
+Output:
+```clojure
+user> (length "dfd")
+3
+user> (length [1])
+ClassCastException clojure.lang.PersistentVector cannot be cast to java.lang.String  user/length (test.clj:77)
+```
 
+See Emerick, Chas, Brian Carper, and Christophe Grand. Clojure programming. " O'Reilly Media, Inc.", 2012.
