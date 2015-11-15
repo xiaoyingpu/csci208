@@ -29,6 +29,9 @@ user> (re-matches #"[+-]?[0]*[0-9]+" "-3")
 "-3"
 user> (re-matches #"[+-]?[0]*[0-9]+" "-3.14")
 nil
+user> (re-matches #"[0-4]?[3-9]+(6*[2-4a-e]+)*" "176a3b62")
+["176a3b62" "62"]
+TODO: what does this mean?
 ```
 
 ## Search
