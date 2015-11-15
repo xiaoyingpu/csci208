@@ -56,3 +56,14 @@ user> (re-find #"fo*" "fooofo")
 user> (re-seq #"[0-4]?[3-9]+(6*[2-4a-e]+)*" "1336b09e176a3b62047b62")
 (["1336b" "b"] ["09e" "e"] ["176a3b62" "62"] ["047b62" "62"])
 ```
+
+## Replace
+
+Clojure has `replace` in `clojure.string` that finds all instances of match and replaces them with a new string.
+
+```clojure
+user> (clojure.string/replace "Hello World" #"o" #(str % %))
+"Helloo Woorld"
+```
+
+See [clojuredoc](https://clojuredocs.org/).
