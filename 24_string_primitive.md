@@ -1,4 +1,4 @@
-# Is string a primitive type? 
+# 24. Is string a primitive type? 
 
 (In C++ it is, in Java, C, Haskell, ... it is not). What math operations can you do on strings? (s+s, s*3) What other operations are provided for strings? (none, substring, index of). Is there a concept of a terminating character like the ’\0’ in C?
 
