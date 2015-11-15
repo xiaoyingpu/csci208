@@ -6,6 +6,6 @@
 
 ## Answer:
 
-Since Clojure runs on JVM, it's reasonable that Clojure uses the same memory allocation strategy as Java. As an indirect evidence, _Clojure Programming_  says that ``many thousands`` of agent objects can be created on the heap.
+Since Clojure runs on JVM, it's reasonable that Clojure uses the same memory allocation strategy as Java. As an indirect evidence, _Clojure Programming_  says that _many thousands_ of agent objects can be created on the heap.
 
 See Emerick, Chas, Brian Carper, and Christophe Grand. Clojure programming. " O'Reilly Media, Inc.", 2012.
