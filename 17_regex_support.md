@@ -9,9 +9,6 @@ clojure-noob.core> (class #"gneiss")
 java.util.regex.Pattern
 ```
 
-TODO
-* Design decision clojure took: * eager / non-eager?
-
 
 There are mainly four things we do with regular expressions:
 
@@ -35,5 +32,12 @@ TODO: what does this mean?
 ```
 
 ## Search
+
+TODO
+Search inside a string for a regular expression. In general, languages can adopt one of the two options for searching:
+
+1. greedy - returns the longest portion of the string that matches.
+2. non-greedy - returns the first part of the string that matches.
+
 
 
