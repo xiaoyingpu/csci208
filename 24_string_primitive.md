@@ -6,6 +6,7 @@
 ## Answers
 
 * According to its inventor, Clojure String is one of the _atomic data types_;  an array of characters is not the same as a string in Clojure (see [this video of Hickey's](https://www.youtube.com/watch?v=P76Vbsk_3J0&list=WL&index=4)).
+* Clojure does not do string math, otherwise `ClassCastException` will occur.
 * There is a rich API for string manipulation, including:
 	* reverse
 	* 
