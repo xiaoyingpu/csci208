@@ -20,10 +20,11 @@ user> (defn foo [x] (+ 2 x))
 
 ### Type hint
 
-Clojure does allow type hints, which are not required. Type hints are useful for improving performance. 
+Clojure does allow type hints. Type hints can be useful for improving performance when interopping with Java.
 
 ```clojure
 (defn length
+  ;; java's String class
   [^String s]
   (.length s ))
 ```
@@ -33,6 +34,7 @@ Output:
 user> (length "dfd")
 3
 user> (length [1])
+;; look, type error
 ClassCastException clojure.lang.PersistentVector cannot be cast to java.lang.String  user/length (test.clj:77)
 ```
 
