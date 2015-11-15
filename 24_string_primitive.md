@@ -12,7 +12,11 @@
 	* replace
 	* join
 	* index-of
-* No there is no such thing as not having terminated the String and the program seg faults.
+	* subs (substring)
+* No there is no such thing as not having null-terminated the String and the program seg faults.
 
-
+```clojure
+user> (subs "01234" 1 3)
+"12"
+```
 See [clojure source code](https://github.com/clojure/clojure/blob/master/src/clj/clojure/string.clj).
