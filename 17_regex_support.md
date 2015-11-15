@@ -50,3 +50,9 @@ user> (re-find #"fo*" "fooofooooooooo")
 user> (re-find #"fo*" "fooofo")
 "fooo"
 ```
+
+... or use `re-seq` to get a lazy sequence of all finds
+```clojure
+user> (re-seq #"[0-4]?[3-9]+(6*[2-4a-e]+)*" "1336b09e176a3b62047b62")
+(["1336b" "b"] ["09e" "e"] ["176a3b62" "62"] ["047b62" "62"])
+```
