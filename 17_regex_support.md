@@ -22,6 +22,14 @@ There are mainly four things we do with regular expressions:
 
 ## Recognize
 
+Clojure has `re-matches` that returns true only if the entire given string matches the regular expression given.
+
+```clojure
+user> (re-matches #"[+-]?[0]*[0-9]+" "-3")
+"-3"
+user> (re-matches #"[+-]?[0]*[0-9]+" "-3.14")
+nil
+```
 
 ## Search
 
