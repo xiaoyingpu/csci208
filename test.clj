@@ -1,3 +1,5 @@
+;; test file, not coll of answers
+
 (defn is-positive 
   [i]
 (bit-and i (bit-not (bit-shift-right i 31))))
