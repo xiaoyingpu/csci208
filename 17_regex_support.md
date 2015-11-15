@@ -37,7 +37,16 @@ TODO
 Search inside a string for a regular expression. In general, languages can adopt one of the two options for searching:
 
 1. greedy - returns the longest portion of the string that matches.
-2. non-greedy - returns the first part of the string that matches.
+2. non-greedy - returns the first part of the string that matches. (clojure's choice)
+
+Clojure has `re-find` that does searching.
 
 
-
+```Clojure
+;; always the first match
+user> (re-find #"fo*" "fooofooooooooo")
+"fooo"
+;; so it does non-greedy
+user> (re-find #"fo*" "fooofo")
+"fooo"
+```
