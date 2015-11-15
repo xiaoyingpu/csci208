@@ -73,3 +73,8 @@
 
 (defn fibs []
   (fib 1 1))
+
+(defn length
+  [^String s]
+  (.length s ))
+
