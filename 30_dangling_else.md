@@ -6,8 +6,13 @@ Since Clojure is fully-paranthesized, there is no such problem as dangling else;
 (defn funk []
   (if true
     (if false 
+      ;; execute this line if true
       (println "nested")
-      (println "this else knows...."))))
+      ;; execute this line if false
+      ;; there is no keyword else anyways....
+      (println "this else knows....")))
+    ;; meanwhile outside the parenthesis: 
+    (println "Am I getting printed?))
 ```
 
 Output:
@@ -23,8 +28,6 @@ nil
 
 Since Clojure has all expressions, `if` always returns something. The argument in case of `else` condition is optional. Specifically, if nothing is supplied to the `else` condition, Clojure defaults to return nil. It is a problem in that user does not have to specify anything for the dangling else; on the other hand, something is always returned.
 
-<span>|p<span>0.8</span>|</span>
-
 ``` clj
 ;; prototype: (if test then else?)
 ;; then clause = "try dangling"
@@ -33,4 +36,5 @@ user> (if false "try dangling")
 nil ;; default
 ```
 
-See clojure.core’s documentation at .
+
+See [clojure.core](https://clojuredocs.org/clojure.core/if). 
