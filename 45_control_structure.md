@@ -4,7 +4,6 @@ Clojure has two types of flow control: normal and exceptional (see [here](https:
 
 Normal types of control structures include the usual if, if-let, when, when-let, cond, do, eval, loop and more. Exceptional circumstances include assert and try-catch.
 
-<span>|p<span>0.98</span>|</span>
 
 ``` clj
 user=> (if nil "not" "is nil")
