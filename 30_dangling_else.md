@@ -6,7 +6,10 @@ Since Clojure is fully-paranthesized, there is no such problem as dangling else;
 (defn funk []
   (if true
     (if false 
+      ;; execute this line if true
       (println "nested")
+      ;; execute this line if false
+      ;; there is no keyword else anyways....
       (println "this else knows...."))))
 ```
 
