@@ -80,3 +80,10 @@
 
 
 (deftype Animal [name age])
+
+
+(defn funk []
+  (if true
+    (if false 
+      (println "nested")
+      (println "this else knows...."))))
