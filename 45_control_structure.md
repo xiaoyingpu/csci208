@@ -7,15 +7,19 @@ Clojure has two types of flow control: normal and exceptional (see [here](https:
 
 
 ``` clj
+;; if 
 user=> (if nil "not" "is nil")
 "is nil"
 
 ;; when-let is useful for dealing with empty collection
-user=> (defn get-head
-  #_=> [coll]
-  #_=> (when-let [handle (seq coll)]
-  #_=> (first handle)))
-#'user/get-head
+(defn get-head
+  [coll]
+  (when-let [handle (seq coll)]
+    (first handle)))
+```
+
+Output:
+```clojure
 user=> (get-head [1,43,34])
 1
 user=> (get-head [])
