@@ -2,7 +2,8 @@
 
 Clojure has two types of flow control: normal and exceptional (see [here](https://clojuredocs.org/quickref)).
 
-Normal types of control structures include the usual if, if-let, when, when-let, cond, do, eval, loop and more. Exceptional circumstances include assert and try-catch.
+* Normal types of control structures include the usual if, if-let, when, when-let, cond, do, eval, loop and more.  
+*  Exceptional circumstances include assert and try-catch.
 
 
 ``` clj
