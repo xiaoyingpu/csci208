@@ -1016,22 +1016,7 @@ ClassCastException
 
 No Clojure does not do nonsense math
 
-30. What about dangling else? Is it a problem? If yes, how does it handle it? if not, why is it not a problem? It is a problem in both C and Java but not in Haskell
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Since Clojure has all expressions, `if` always returns something. The argument in case of `else` condition is optional. Specifically, if nothing is supplied to the `else` condition, Clojure defaults to return nil. It is a problem in that user does not have to specify anything for the dangling else; on the other hand, something is always returned.
-
-<span>|p<span>0.8</span>|</span>
-
-``` clj
-;; prototype: (if test then else?)
-;; then clause = "try dangling"
-;; else? is missing here
-user> (if false "try dangling")
-nil ;; default
-```
-
-See clojure.core’s documentation at .
 
 39. Does it use short circuit evaluation? Are these operators with options or not as you like?
 ----------------------------------------------------------------------------------------------
