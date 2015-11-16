@@ -939,22 +939,6 @@ clojure.reflect=> ((reflect 42) :bases)
 
 See the API at .
 
-18. Brief history of Clojure
-----------------------------
-
--   Clojure was created by Rich Hickey in 2007[2]. It took Hickey about two years to write it before the initial release.
-
--   Clojure compiles down to Java bytecode[3].
-
--   Built from Hickey’s personal revelations in working as a software engineer, Clojure was created to be the following because C++ / C\# / Java are not good enough[4].
-
-    -   A functional language, especially Lisp-like.
-
-    -   symbiotic with a popular platform for portability and practicality.
-
-    -   concurrency-friendly.
-
--   Yes. People are hiring for Clojure, and the pay is pretty good[5]. Clojure jobs come from start-ups like Cognitect[6], and of course there are more. A search on LinkedIn revealed a variety of job opportunities[7] in areas of web development, data science and more.
 
 26. Can you directly access or manipulate the bits of an integer value? What operations are possible?
 -----------------------------------------------------------------------------------------------------
