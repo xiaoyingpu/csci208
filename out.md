@@ -1067,51 +1067,7 @@ From <https://github.com/clojure/clojure/blob/master/src/clj/clojure/core.clj>
 
 Clojure reader.clj can be found at <https://github.com/clojure/tools.reader/blob/master/src/main/clojure/clojure/tools/reader/impl/commons.clj>
 
-45. What control structures does it use? For instance C has an old style ?: for selection.
-------------------------------------------------------------------------------------------
 
-Clojure has two types of flow control: normal and exceptional[16].
-
-Normal types of control structures include the usual if, if-let, when, when-let, cond, do, eval, loop and more. Exceptional circumstances include assert and try-catch.
-
-<span>|p<span>0.98</span>|</span>
-
-``` clj
-user=> (if nil "not" "is nil")
-"is nil"
-
-;; when-let is useful for dealing with empty collection
-user=> (defn get-head
-  #_=> [coll]
-  #_=> (when-let [handle (seq coll)]
-  #_=> (first handle)))
-#'user/get-head
-user=> (get-head [1,43,34])
-1
-user=> (get-head [])
-nil
-```
-
-``` clj
-;; An example for when
-(defn train ;; define a function, train
-    [x]     ;; that takes one argument
-    (when (pos? x)  ;; when x is positive
-      (println "Choo choo!")
-      ;; recur is a special form that does
-      ;; __tail recursion__
-      (recur (dec x)))) 
-```
-
-``` clj
-clojure-noob.core> (train 3)
-Choo choo!
-Choo choo!
-Choo choo!
-nil
-```
-
-See <https://clojuredocs.org/clojure.core/when-let>
 
 31. What is the order or precedence for all the math operators? relational operators? any other operators? This requires an answer but not code or an argument. It definitely requires a reference.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1180,4 +1136,3 @@ Adapted from
 
 [15] http://clojure.org/multimethods
 
-[16] <https://clojuredocs.org/quickref>
