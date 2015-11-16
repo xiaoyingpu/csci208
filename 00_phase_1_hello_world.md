@@ -15,7 +15,11 @@ Hello World
 ```
 
 Compile and run:
-make sure that you have started the project with `lein`, and then do
-`$ lein run`
-`Hello, World!`
+
+make sure that you have started the project with `lein`, and then do `$ lein run`.
+
+Output:
+````Hello, World!````
+
+
 `lein`, Leiningen, is [here](http://leiningen.org).
