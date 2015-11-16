@@ -1069,10 +1069,7 @@ Clojure reader.clj can be found at <https://github.com/clojure/tools.reader/blob
 
 
 
-31. What is the order or precedence for all the math operators? relational operators? any other operators? This requires an answer but not code or an argument. It definitely requires a reference.
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-This question is not a problem in Clojure; it does not have precedence rules because it is fully parenthesized .
 
 <span>|p<span>0.8</span>|</span>
 
