@@ -78,3 +78,5 @@
   [^String s]
   (.length s ))
 
+
+(deftype Animal [name age])
