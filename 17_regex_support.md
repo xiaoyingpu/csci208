@@ -28,12 +28,10 @@ user> (re-matches #"[+-]?[0]*[0-9]+" "-3.14")
 nil
 user> (re-matches #"[0-4]?[3-9]+(6*[2-4a-e]+)*" "176a3b62")
 ["176a3b62" "62"]
-TODO: what does this mean?
 ```
 
 ## Search
 
-TODO
 Search inside a string for a regular expression. In general, languages can adopt one of the two options for searching:
 
 1. greedy - returns the longest portion of the string that matches.
