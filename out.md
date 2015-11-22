@@ -751,35 +751,9 @@ usr=> (take 2 (range))
 
 A humble concoction of mine.
 
-48. What types of tokens does it have? (literals, keywords, symbols)
---------------------------------------------------------------------
-
-See Section \[rex\] on primitive types. Clojure does have various number, char, string literals, as well as keywords and symbols.
 
 
 
-26. Can you directly access or manipulate the bits of an integer value? What operations are possible?
------------------------------------------------------------------------------------------------------
-
-According to Clojure’s official site[8], it can do bit-and, bit-or, bit-xor, bit-not, bit-shift-right and bit-shift-left. The following example uses bitwise and & bitwise shift right.
-
-<span>|p<span>0.8</span>|</span>
-
-``` clj
-;; from a 206 lab
-;; get_byte - Extract byte n from word x
-;; example: get_byte(0x12345678, 1) = 0x56
-(defn get-byte
-  [x n]
-  (format "0x%x" 
-        (bit-and 
-         (bit-shift-right x (* 8 n)) 
-         0xff)))
-user> (get-byte 0xdeadbeef 0)
-"0xef"
-```
-
-See .
 
 25. What math operations can you do on numbers? Is this different for characters and other integer-like types? Does it allow math that makes no sense?
 ------------------------------------------------------------------------------------------------------------------------------------------------------
