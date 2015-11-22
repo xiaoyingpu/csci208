@@ -31,7 +31,8 @@ Clojure reader.clj can be found at [github](https://github.com/clojure/tools.rea
 _Clojure Programming_ says that a keyword always starts with a `:`, and is followed by any non-white characters.
 
 ```clj
-(def ^Pattern keyword-pattern #":[^\space\tab\newline\formfeed\return\backspace]+")
+(def ^Pattern keyword-pattern 
+#":[^\space\tab\newline\formfeed\return\backspace]+")
 
 ;; verify
 user> (def akey :-)
