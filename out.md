@@ -679,21 +679,7 @@ true
 
 A humble concoction of mine.
 
-**11. built in list comprehensions**
 
-Yes Clojure has list comprehensions, with macro `for` .
-
-<span>|p<span>0.8</span>|</span>
-
-``` clj
-;; (for sequence-exprs body-expr)
-;; python equiv of for x in range(3):
-usr => (for [x (range 3)] (* x x))
-;; returns a new list
-(0 1 4)
-```
-
-See .
 
 17. regular expression support in a library?
 --------------------------------------------
