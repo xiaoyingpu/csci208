@@ -90,3 +90,8 @@
     (if false 
       (println "nested")
       (println "this else knows...."))))
+
+(defn short-circuit []
+  (or 
+   true
+   (do (println "this prints if true or _ is evaluated"))))
