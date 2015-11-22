@@ -585,39 +585,6 @@ Phase 6: Dynamic typing, scope & regex
 
 
 
-**10. evaluation strategy**
-
-Clojure is partly a lazy language .
-
-Normally, Clojure uses <span>*eager*</span> evaluation, which starts from the innermost parenthesis and works its way outwards. Notice that in Clojure, the precedence of operators is not a problem because of all the `(((((())))))`’s.
-
-<span>|p<span>0.8</span>|</span>
-
-``` clj
-;; 4 + 2 is eagerly evaluated first
-;; then 7 * 6
-usr => (* 7 ( + 4 2))
-42
-```
-
-A humble concoction of mine.
-
-When dealing with sequence types, Clojure uses lazy evaluation. For instance, Clojure only “takes” what it needs:
-
-<span>|p<span>0.8</span>|</span>
-
-``` clj
-;; (range) is a sequence of 0 to infinite int's
-usr=> (take 2 (range))
-;; universe is still intact because Clojure is lazy
-(0 1)
-```
-
-A humble concoction of mine.
-
-
-
-
 
 25. What math operations can you do on numbers? Is this different for characters and other integer-like types? Does it allow math that makes no sense?
 ------------------------------------------------------------------------------------------------------------------------------------------------------
