@@ -14,6 +14,7 @@ __Note:__
 
 ## How to run code
 
+Since Clojure has a very nice read-evaluate-print-loop (REPL), separate `clj` files are not provided for each question.
 
 1. Install Java.
 2. Install [Clojure](http://clojure.org/getting_started).
