@@ -30,7 +30,13 @@ From [@fogus2014joy](Ch.10.6.4).
 
 ## `binding`
 
-`binding` takes a dynamic var, and the new binding affects the call stack . `binding` can allow a var to be shared safely between threads; each thread pushes / pops its own local binding of the same var, leaving the global var unchanged, nor does its local binding affect other threads. The following example only shows one simple use case of binding. 
+`binding` takes a dynamic var, and the new binding affects the call stack . 
+
+### Application of dynamic scoping in Clojure
+
+`binding` can allow a var to be shared safely between threads; each thread pushes / pops its own local binding of the same var, leaving the global var unchanged, nor does its local binding affect other threads. The following example only shows one simple use case of binding. 
+
+### But
 
 It is not within the scope of this report to present the advantage of dynamic scoping in a concurrent context. The code examples are either not illustrative or broken in [clojuredoc](https://clojuredocs.org/clojure.core/binding) due to API change among different versions of Clojure.
 
