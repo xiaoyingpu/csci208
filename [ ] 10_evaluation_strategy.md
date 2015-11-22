@@ -36,6 +36,8 @@ Try:
 Output:
 
 ```clj
+;; would have printed sqr first 
+;; if eager evaluation is used 
 user> (main)
 dbl
 sqr
