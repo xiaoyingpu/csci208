@@ -26,7 +26,7 @@ Try:
   (* x x))
 
 (defn dbl [x]
-  (println "tri")
+  (println "dbl")
   (+ x x))
 
 (defn main []
