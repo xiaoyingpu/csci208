@@ -579,28 +579,7 @@ Adapted from .
 Phase 6: Dynamic typing, scope & regex
 ======================================
 
-2. static vs dynamic typing. duck typed?
-----------------------------------------
 
-Clojure, like Lisp, is dynamically typed[1]. Lisp seems to be the first language that features dynamic typing . There are no mutable states in Clojure , so the following example is used to illustrate dynamic typing.
-
-<span>|p<span>0.8</span>|</span>
-
-``` clj
-usr=> (defn foo [x y] (/ x y)) ;; x / y
-usr=> (foo \a 1) ;; char 'a' and int 1
-ClassCastException java.lang.Character cannot be 
-cast to java.lang.Number  clojure.lang.Numbers.
-divide (Numbers.java:159)
-;; So the exception came from divide operator,
-;; not the type checking of foo()
-;; foo() does not require args to be certain types
-;; so clojure is ducked typed as well.
-```
-
-To run: in Emacs, `M-x`, select cider-jack-in to start REPL
-Enter code at the prompt.
-For using cider in Emacs, see
 
 3. untyped vs weakly typed vs strongly typed
 --------------------------------------------
@@ -855,7 +834,6 @@ Then do `C-c C-k` to compile the current buffer
 For using cider in Emacs, see
 Adapted from
 
-[1] <https://www.quora.com/Is-Scala-faster-than-Clojure>. Michael Klishin seems to be an experienced developer of Clojure
 
 [2] <https://github.com/clojure/clojure/commits/1.0.x?page=30>
 
