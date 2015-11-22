@@ -6,6 +6,7 @@
 
 Snippets found in Clojure source code: 
 
+## Numbers
 
 ``` clj
 ;; integer
@@ -22,4 +23,17 @@ Snippets found in Clojure source code:
 ([eE][-+]?[0-9]+)?)(M)?")
 ```
 
+## Keywords
+
+```clj
+(def ^Pattern keyword-pattern #":[^:]")
+
+;; verify
+user> (def akey :-)
+#'user/akey
+user> ({:- 3} :-)
+3 ;; OK
+user> (def another :-:)
+RuntimeException Invalid token: :-: 
+```
 Clojure reader.clj can be found at [github](https://github.com/clojure/tools.reader/blob/master/src/main/clojure/clojure/tools/reader/impl/commons.clj).
