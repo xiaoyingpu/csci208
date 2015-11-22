@@ -26,6 +26,7 @@ Snippets found in Clojure source code:
 ## Keywords
 
 ```clj
+;; from experimentation
 (def ^Pattern keyword-pattern #":[^:]")
 
 ;; verify
