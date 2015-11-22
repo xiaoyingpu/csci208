@@ -581,32 +581,6 @@ Phase 6: Dynamic typing, scope & regex
 
 
 
-3. untyped vs weakly typed vs strongly typed
---------------------------------------------
-
-Clojure is strongly typed, at least stronger than Java; see the tests below.
-
-<span>|p<span>0.9</span>|</span>
-
-``` clj
-;; Clojure is typed, see the cast exception
-usr=> (/ \a 1)
-ClassCastException java.lang.Character cannot be cast to
-java.lang.Number  clojure.lang.Numbers.divide 
-(Numbers.java:159)
-;; Clojure being unable to cast character into int
-;; => Stronger than Java
-
-usr=> (/ 1 4.2)
-0.23809523809523808
-;; Coerced 1, an int, into floating point
-;; => weaker than Ada
-```
-
-To run: in Emacs, `M-x`, select cider-jack-in to start REPL
-Enter code at the prompt.
-For using cider in Emacs, see
-
 
 
 **9. parameter passing mechanisms**
