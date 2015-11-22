@@ -869,7 +869,6 @@ Adapted from
 
 [7] <https://www.linkedin.com/job/clojure-jobs/?sort=relevance&page_num=1&trk=jserp_pagination_1>
 
-[8] <http://clojure.org/data_structures>
 
 [9] <https://github.com/clojure/clojure/blob/bdc752a7fefff5e63e0847836ae5e6d95f971c37/src/clj/clojure/core.clj>
 
