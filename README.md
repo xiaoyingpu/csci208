@@ -20,3 +20,5 @@ __Note:__ the bibtex citations are all broken in the markdown files. Please sear
 
 
 ## _Good-to-have_:
+
+[braveclojure](http://www.braveclojure.com/basic-emacs/) teaches how to set up your emacs to work with Clojure conveniently.
