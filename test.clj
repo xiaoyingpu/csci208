@@ -12,18 +12,21 @@
          0xff)))
 
 (def z 3)
+
+
+
 (def a 3)
 
 (defn sqr [x]
   (println "sqr")
   (* x x))
 
-(defn tri [x]
-  (println "tri")
-  (+ x x x))
+(defn dbl [x]
+  (println "dbl")
+  (+ x x))
 
 (defn main []
-  (sqr (tri a)))
+  (println (sqr (dbl a))))
 
 
 (defn get-string 
