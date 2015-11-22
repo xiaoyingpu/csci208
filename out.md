@@ -583,27 +583,6 @@ Phase 6: Dynamic typing, scope & regex
 
 
 
-**9. parameter passing mechanisms**
-
-Like Java, Clojure passes arguments by value; in the case of references, they are passed by references pointing to objects . One way to test it is to use `identical?`, which decides if the two arguments are the same object .
-
-<span>|p<span>0.8</span>|</span>
-
-``` clj
-;; define a global z with a vector
-usr => (def z [1])
-#'clojure-noob.core/z
-;; foo takes a parameter 
-;; foo uses identical? to check
-usr => (defn foo [a] (identical? a z))
-#'clojure-noob.core/foo
-usr => (foo z)
-;; the z passed in and the global z are the same obj
-true    
-```
-
-
-
 
 
 **10. evaluation strategy**
