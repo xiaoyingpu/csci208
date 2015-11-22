@@ -11,34 +11,7 @@ The closest thing to BNF for Clojure is attached, from [github/ccw](https://gith
  * Metadata must be Symbol,Keyword,String or Map : add this precision to the documentation ?
  */
 grammar Clojure;
-/*
-options {
-// TODO : try to refactor the grammar to get rid of backtrack=true or to minimize the backtracking
-backtrack=true;
-rewrite=true;
-}
-*/
-//options {output=template; rewrite=true;}
 
-@members {
-boolean inLambda=false;
-int syntaxQuoteDepth = 0;
-
-java.util.List symbols = new java.util.ArrayList();
-public List getCollectedSymbols() { return symbols; }
-// TODO envisage to remove this when the grammar is fully tested ?
-//public void recover(IntStream input, RecognitionException re) {
-//	throw new RuntimeException("Not recovering from RecognitionException, na!", re);
-//}
-//}
-
-//@lexer::members {
-java.util.Map parensMatching = new java.util.HashMap(); 
-public Integer matchingParenForPosition(Integer position) {
-  return (Integer) parensMatching.get(position);
-}
-public void clearParensMatching() { parensMatching.clear(); }
-}
 
 /*
  * Lexer part
@@ -69,7 +42,6 @@ NUMBER_SIGN: '#'
 APOSTROPHE: '\''
         ;
         
-// TODO complete this list
 SPECIAL_FORM: 'def' | 'if' | 'do' | 'let' | 'quote' | 'var' | 'fn' | 'loop' |
             'recur' | 'throw' | 'try' | 'monitor-enter' | 'monitor-exit' |
             'new' | 'set!' | '.'
@@ -107,8 +79,6 @@ OctalEscape
     |   '\\' ('0'..'7')
     ;
 
-// TODO get the real definition from a java grammar.
-// FIXME for the moment, allow just positive integers to start playing with the grammar
 NUMBER: '-'? '0'..'9'+ ('.' '0'..'9'+)? (('e'|'E') '-'? '0'..'9'+)?
     ;
 
@@ -296,8 +266,7 @@ this.inLambda = false;
     ;
 ````
 
-
-[github/sad](https://github.com/arrdem/sad/blob/master/src/me/arrdem/sad/grammars/bnf.clj)
+<!--[github/sad](https://github.com/arrdem/sad/blob/master/src/me/arrdem/sad/grammars/bnf.clj) -->
 
 
 
