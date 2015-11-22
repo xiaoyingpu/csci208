@@ -7,7 +7,7 @@ universe.
 
 We talk about three flavors of infinity:
 
-1. `(range)`
+1. `(range)`, the equivalent of Haskell's `[1..]`.
 2. stream
 3. list comprehension
 
