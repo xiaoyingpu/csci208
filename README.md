@@ -12,3 +12,11 @@ __Note:__ the bibtex citations are all broken in the markdown files. Please sear
 ## How to run code
 
 
+1. Install Java.
+2. Install [Clojure](http://clojure.org/getting_started).
+3. Install [Leiningen](http://leiningen.org) and get the dependencies right.
+4. Run `lein repl`
+5. Enter code at the prompt
+
+
+## _Good-to-have_:
