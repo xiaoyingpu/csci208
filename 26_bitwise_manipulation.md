@@ -28,3 +28,5 @@ user> (get-byte 0xdeadbeef 0)
 ```
 
 See [clojuredoc](https://clojuredocs.org/clojure.core/bit-shift-right).
+
+[8] <http://clojure.org/data_structures>
