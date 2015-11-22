@@ -33,12 +33,13 @@ _Clojure Programming_ says that a keyword always starts with a `:`, and is follo
 ```clj
 (def ^Pattern keyword-pattern 
 #":[^\space\tab\newline\formfeed\return\backspace]+")
-
 ;; verify
 user> (def akey :-)
 #'user/akey
 user> ({:- 3} :-)
 3 ;; OK
+user> (re-matches #":[^\space\tab\newline\formfeed\return]+" ":-")
+":-"
 ```
 
 
