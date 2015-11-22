@@ -1,5 +1,5 @@
-52. What comment stypes does it support?
-----------------------------------------
+# 52. What comment stypes does it support?
+
 
 Clojure has two ways of commenting:
 
@@ -19,3 +19,4 @@ user> (if true #_[0] [42])
 [42]
 ```
 
+See [this Clojure style guide @ github](https://github.com/bbatsov/clojure-style-guide).
