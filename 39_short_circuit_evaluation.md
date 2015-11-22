@@ -7,8 +7,7 @@ Clojure does short-circuit evaluation for `and` and `or`. Google searches yielde
 
 ``` clj
 user> (or true 
-    (do (println "no short-circuit")) 
-    "see above")
+    (do (println "no short-circuit")))
 true
 ;; nothing prints so does short circuit
 ;; the operator and does the same thing
