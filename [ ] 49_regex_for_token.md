@@ -39,3 +39,10 @@ user> (def akey :-)
 user> ({:- 3} :-)
 3 ;; OK
 ```
+
+
+## Booleans
+
+```clj
+(true)|(false)
+```
