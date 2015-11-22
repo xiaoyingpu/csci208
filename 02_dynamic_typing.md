@@ -15,4 +15,8 @@ divide (Numbers.java:159)
 ;; foo() does not require args to be certain types
 ;; so clojure is ducked typed as well.
 ```
+
+
+
+
 [1] <https://www.quora.com/Is-Scala-faster-than-Clojure>. Michael Klishin seems to be an experienced developer of Clojure.
