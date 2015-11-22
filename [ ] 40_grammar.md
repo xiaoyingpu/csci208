@@ -63,7 +63,7 @@ BOOLEAN:
     ;
 
 SYMBOL:
-        '/' // The division function FIXME is it necessary to hardcode this ?
+        '/'
     |   NAME ('/' NAME)?
     ;
 
@@ -96,8 +96,7 @@ file:
     
 form	:	   
 	 {this.inLambda}? LAMBDA_ARG
-    |    literal // Place literal first to make nil and booleans take precedence over symbol (impossible to 
-                // name a symbol nil, true or false)
+    |    literal 
     |	COMMENT
     |   AMPERSAND
     |   metadataForm? ( SPECIAL_FORM | s=SYMBOL { symbols.add(s.getText()); } | list | vector | map )
@@ -126,9 +125,6 @@ map:    LEFT_CURLY_BRACKET (form form)* RIGHT_CURLY_BRACKET
 set:    NUMBER_SIGN LEFT_CURLY_BRACKET form* RIGHT_CURLY_BRACKET
     ;
 
-metadataForm:
-        NUMBER_SIGN CIRCUMFLEX (map | SYMBOL|KEYWORD|STRING)
-    ;
 
 ````
 
