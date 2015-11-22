@@ -574,141 +574,6 @@ Enter code at the prompt.
 For using cider in Emacs, see
 Adapted from .
 
-Higher order functions, anonymous functions, portability and infinite lists
-===========================================================================
-
-**Phase 5: Higher order functions**
-
-------------------------------------------------------------------------
-
-12. higher order functions. Haskell supports these in many ways. C lets you pass functions into a function which is higher order but that is it.
-------------------------------------------------------------------------------------------------------------------------------------------------
-
-A higher order function is defined such that it takes functions as arguments, and / or it returns a function as a result (Ch. 7.1.2).
-
-**Functions as arguments**
-
-There are three important high order functions in Clojure (Ch 6.3.4).
-
--   `map`: applies the function passed in as argument to the provided sequence, and returns another sequence as the result.
-
--   `reduce`: applies the given function to the first two items in the collection; it then take the intermediate result and apply the function with the third item and so forth.
-
--   `filter`: applies the function to every item in the collection; if function returns false for an item, this item is filtered out.
-
-<span>|p<span>0.99</span>|</span>
-
-``` clj
-;; =============== map ===================
-;; dec decreases the value of argument by 1;
-;; dec as a function, is one of the two arguments
-;; map applies dec to every element in [0 42]
-;; A new sequence is returned.
-user=> (map dec [0 42])
-(-1 41)
-
-;; using map to get columns of a 2D array
-user=> (map vector [:x :1] [:y :2] [:z])
-;; map stops when one of the sequence runs out
-([:x :y :z]) ;; so no [:1 :2] here
-
-;; =============== reduce ================
-;; Go Gauss!
-;; range returns a lazy sequence from 1 to 100, inclusive
-;; Step 1: 1 + 2 = 3
-;; Step 2: 3 + 3 = 6
-;; Step 3: 6 + 4 = 10 and so forth
-;; The sequence is "reduced" to 5050, the sum of all items
-user=> (reduce + (range 1 101))
-5050
-
-;; ============= filter ==================
-;; even? is a function
-user=> (filter even? (range 41 43))
-;; between 41 and 42, inclusive
-(42) ;; 42 is even!
-```
-
-To run: in Emacs, `M-x`, select cider-jack-in to start REPL
-Enter code at the prompt.
-For using cider in Emacs, see
-Adapted from .
-
-**Functions as return values**
-
-Clojure has three important functions in this category :
-
--   `comp` takes a set of functions and return a composition function. The returned function will apply the set of functions from the right most to the left.
-
--   `partial` takes a function f that expects n arguments, and x arguments of f. `partial f args`. Returns a fn that takes y arguments, such that \(x + y = n\).
-
--   `complement` returns the opposite truth value for the argument function passed in.
-
-It is also possible to define a new function that returns a function.
-
-<span>|p<span>0.99</span>|</span>
-
-``` clj
-;; =============== comp ===================
-;; First, -84/2 = -42
-;; Second, -(-42)
-;; Applied from right to left
-user=> ((comp - /) -84 2)
-42
-
-;; =============== partial ================
-;; Partial returns a fn: "4" + ?
-;; then fn found its other arg to be "2"
-;; very nice
-user=> ((partial str "4") "2")
-"42"
-
-;; ============= complement ==================
-;; (complement odd?) effectively returns an even? function
-user=> (filter (complement odd?) (range 41 43))
-(42)
-```
-
-To run: in Emacs, `M-x`, select cider-jack-in to start REPL
-Enter code at the prompt.
-For using cider in Emacs, see
-Definitions adapted from .
-
-**Phase 5: Anonymous functions**
-
-------------------------------------------------------------------------
-
-14. Anonymous functions
------------------------
-
-As a functional language, Clojure uses a special form to build anonymous, or unnamed, functions . There is also a reader feature to define in-place functions using `#()`.
-
-<span>|p<span>0.99</span>|</span>
-
-``` clj
-;; This function has no name
- ((fn [n]     ;; a vector of function params, n
-    (* 3 n))            ;; return value = 3 * n
-    2)                  ;; passing in param
-    
-Output
-6                       ;; return value
-
-;; ... which is the same as using #()
-(#(* 3 %) 2)  
-;; The % implicitly declares the accepted argument
-```
-
-To run: use Emacs and cider see
-Adapted from and .
-
-**Phase 5: Portability**
-
-------------------------------------------------------------------------
-
-<span>*47. Does it claim to be portable like Java? How portable is it?*</span>
-
-Rich Hickey, the designer of Clojure, said that Clojure was intended as a hosted language . Clojure can use Java libraries easily. This hosted feature allows Clojure be used wherever Java is used . Consequently, Clojure is very portable because JVM is; portability is one of the key features of Clojure. Besides JVM, Clojure can also be hosted on CLR (Common Language Runtime) and JavaScript.
 
 **Phase 5: Infinite Lists**
 
@@ -984,71 +849,8 @@ See[12]
 
 Prefix 100% of the time, all the time! All function calls, unary, binary operators etc. are all prefix.
 
-52. What comment stypes does it support?
-----------------------------------------
 
-Clojure has two ways of commenting:
 
-1.  commenting out a line with `;`
-
-2.  commenting out a form with `#_`
-
-<span>|p<span>0.8</span>|</span>
-
-``` clj
-; This is a comment
-;; but using two of ;'s is more common
-;; #_ comments out a pair of ()
-user> (if true #_(:answer) (+ 1 41))
-42
-;; #_ works for [] as well
-user> (if true #_[0] [42])
-[42]
-```
-
-See[14]
-
-16. Overloading of method names or operators
---------------------------------------------
-
-In Clojure, operators are plain functions (p. 13). Overloading is possible for both methods and operators. In practise, it is better to use multimethods than simply overloading functions, especially basic operators like +[15].
-
-<span>|p<span>0.8</span>|</span>
-
-``` clj
-;; attempt to overload + operator
-user> (defn + [x] 0)
-;; compiler gives a warning
-WARNING: + already refers to: #'clojure.core/+ in 
-namespace: user, being replaced by: #'user/+
-#'user/+
-;; but the evil definition is used anyways
-user> (+ 3)
-0
-;; what an awful thing to do
-```
-
-My humble concoction
-
-Clojure also comes with overloaded methods. Clojure does arity overloading within a single function definition. Below is a snippet of the source code for + operator in clojure.core
-
-<span>|p<span>0.98</span>|</span>
-
-``` clj
-(defn +
-  "Returns the sum of nums. (+) returns 0. Does not auto-promote
-  longs, will throw on overflow. See also: +'"
-  {:inline (nary-inline 'add 'unchecked_add)
-   :inline-arities >1?
-   :added "1.2"}
-  ([] 0)            ; no argument
-  ([x] (cast Number x)) ; one argument
-  ([x y] (. clojure.lang.Numbers (add x y))) ; 2
-  ([x y & more]                              ; or more
-     (reduce1 + (+ x y) more)))
-```
-
-From <https://github.com/clojure/clojure/blob/master/src/clj/clojure/core.clj>
 
 **49. What are the regular expressions for its tokens? (Give a regular expression to describe each category of literals - integers, booleans, etc).**
 
@@ -1069,10 +871,7 @@ Clojure reader.clj can be found at <https://github.com/clojure/tools.reader/blob
 
 
 
-31. What is the order or precedence for all the math operators? relational operators? any other operators? This requires an answer but not code or an argument. It definitely requires a reference.
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-This question is not a problem in Clojure; it does not have precedence rules because it is fully parenthesized .
 
 <span>|p<span>0.8</span>|</span>
 
@@ -1132,7 +931,6 @@ Adapted from
 [12] <http://stackoverflow.com/questions/8190417/does-clojure-have-short-circuit-logic>
 
 
-[14] []()
 
 [15] http://clojure.org/multimethods
 
