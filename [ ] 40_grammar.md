@@ -23,31 +23,14 @@ CLOSE_PAREN: ')'
 	;
 AMPERSAND: '&'
         ;
-LEFT_SQUARE_BRACKET: '['
-        ;
-RIGHT_SQUARE_BRACKET: ']'
-        ;
-LEFT_CURLY_BRACKET: '{'
-        ; 
-RIGHT_CURLY_BRACKET: '}'
-        ;
-BACKSLASH: '\\'
-        ;
-CIRCUMFLEX: '^'
-        ;
-COMMERCIAL_AT: '@'
-        ;
-NUMBER_SIGN: '#'
-        ;
-APOSTROPHE: '\''
-        ;
+
+....
         
 SPECIAL_FORM: 'def' | 'if' | 'do' | 'let' | 'quote' | 'var' | 'fn' | 'loop' |
             'recur' | 'throw' | 'try' | 'monitor-enter' | 'monitor-exit' |
             'new' | 'set!' | '.'
     ;
 
-// taken from the java grammar example of Terrence Parr
 STRING
     :  '"' ( EscapeSequence | ~('\\'|'"') )* '"'
     ;
@@ -56,28 +39,6 @@ REGEX_LITERAL
     : NUMBER_SIGN '"' ( ~('\\' | '"') | '\\' . )* '"'
     ;
 
-// taken from the java grammar example of Terrence Parr
-fragment
-EscapeSequence
-      :   '\\' .
-//    :   '\\' ('b'|'t'|'n'|'f'|'r'|'\"'|'\''|'\\')
-//    |   UnicodeEscape
-//    |   OctalEscape
-    ;
-
-// taken from the java grammar example of Terrence Parr
-fragment
-UnicodeEscape
-    :   '\\' 'u' HEXDIGIT HEXDIGIT HEXDIGIT HEXDIGIT
-    ;
-
-// taken from the java grammar example of Terrence Parr
-fragment
-OctalEscape
-    :   '\\' ('0'..'3') ('0'..'7') ('0'..'7')
-    |   '\\' ('0'..'7') ('0'..'7')
-    |   '\\' ('0'..'7')
-    ;
 
 NUMBER: '-'? '0'..'9'+ ('.' '0'..'9'+)? (('e'|'E') '-'? '0'..'9'+)?
     ;
@@ -159,7 +120,6 @@ COMMENT:
 SPACE:  (' '|'\t'|','|'\r'|'\n')+ {$channel=HIDDEN;} // FIXME should use NEWLINE but NEWLINE has a problem I don't understand for the moment
     ;
 
-// TODO how many
 LAMBDA_ARG:
         '%' '1'..'9' '0'..'9'*
     |   '%&'
