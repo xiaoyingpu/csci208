@@ -45,6 +45,8 @@ sqr
 nil
 ```
 
+Adapted from homework.
+
 ## Lazy
 
 If clojure used call-by-name, then Clojure would have printed two `tri`'s because function `tri` should be called twice on the line `(* x x)`. (Clojure data is basically immutable, so there is no eazy way to increment that global `a`.)
