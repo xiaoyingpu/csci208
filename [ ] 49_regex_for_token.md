@@ -22,6 +22,9 @@ Snippets found in Clojure source code:
 (def ^Pattern float-pattern #"([-+]?[0-9]+(\.[0-9]*)?
 ([eE][-+]?[0-9]+)?)(M)?")
 ```
+Clojure reader.clj can be found at [github](https://github.com/clojure/tools.reader/blob/master/src/main/clojure/clojure/tools/reader/impl/commons.clj).
+
+
 
 ## Keywords
 
@@ -36,4 +39,3 @@ user> (def akey :-)
 user> ({:- 3} :-)
 3 ;; OK
 ```
-Clojure reader.clj can be found at [github](https://github.com/clojure/tools.reader/blob/master/src/main/clojure/clojure/tools/reader/impl/commons.clj).
