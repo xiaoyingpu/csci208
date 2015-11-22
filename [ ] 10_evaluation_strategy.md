@@ -19,10 +19,29 @@ usr => (* 7 ( + 4 2))
 Try:
 ```clojure
 ;; a is immutable tho
+(def a 3)
 
+(defn sqr [x]
+  (println "sqr")
+  (* x x))
+
+(defn dbl [x]
+  (println "tri")
+  (+ x x))
+
+(defn main []
+  (println (sqr (dbl a))))
 ```
 
 Output:
+
+```clj
+user> (main)
+dbl
+sqr
+36
+nil
+```
 
 ## Lazy
 
