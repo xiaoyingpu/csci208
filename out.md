@@ -677,14 +677,9 @@ usr => (foo z)
 true    
 ```
 
-A humble concoction of mine.
 
 
 
-17. regular expression support in a library?
---------------------------------------------
-
-Regular expression is one of the atomic data types in Clojure, as illustrated in Section \[rex\]. Clojure uses Java’s java.util.regex.
 
 **10. evaluation strategy**
 
