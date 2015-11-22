@@ -728,7 +728,7 @@ user> (+ \a 1)
 ClassCastException 
 ```
 
-No Clojure does not do nonsense math
+No Clojure does not do nonsense math.
 
 
 
