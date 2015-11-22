@@ -39,7 +39,7 @@ user> (def akey :-)
 user> ({:- 3} :-)
 3 ;; OK
 user> (re-matches #":[^\space\tab\newline\formfeed\return]+" ":-")
-":-"
+":-" ;; matches
 ```
 
 
