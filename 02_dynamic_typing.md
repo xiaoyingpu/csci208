@@ -16,7 +16,7 @@ divide (Numbers.java:159)
 ;; so clojure is ducked typed as well.
 ```
 
-
+As shown in the code, Clojure is __duck typed__ as well.
 
 
 [1] <https://www.quora.com/Is-Scala-faster-than-Clojure>. Michael Klishin seems to be an experienced developer of Clojure.
