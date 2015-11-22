@@ -11,6 +11,8 @@ Clojure has two ways of commenting:
 ``` clj
 ; This is a comment
 ;; but using two of ;'s is more common
+user=> (if true (:answer) (+ 1 41))
+IllegalArgumentException Wrong number of args
 ;; #_ comments out a pair of ()
 user> (if true #_(:answer) (+ 1 41))
 42
