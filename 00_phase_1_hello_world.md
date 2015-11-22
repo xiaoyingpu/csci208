@@ -16,7 +16,7 @@ Hello World
 
 Compile and run:
 
-make sure that you have started the project with `lein`, and then do `$ lein run`.
+make sure that you have started the project with `lein`, and then do `$ lein run` in the terminal.
 
 Output:
 ````Hello, World!````
