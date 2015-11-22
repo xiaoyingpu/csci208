@@ -2,7 +2,7 @@
 
 Clojure, like Lisp, is known for having very simple grammar. [clojure official site](http://clojure.org/reader) describes how reader deals with Clojure grammar through various forms. 
 
-The closest thing to BNF for Clojure is attached, from [github/ccw](https://github.com/laurentpetit/ccw/blob/3738a4fd768bcb0399630b7f6a6427a3066bdaa9/clojure-antlr-grammar/src/Clojure.g).
+The closest thing to BNF for Clojure is attached (deleted some for succinctness), from [github/ccw](https://github.com/laurentpetit/ccw/blob/3738a4fd768bcb0399630b7f6a6427a3066bdaa9/clojure-antlr-grammar/src/Clojure.g).
 
 
 ````
@@ -67,30 +67,9 @@ SYMBOL:
     |   NAME ('/' NAME)?
     ;
 
-METADATA_TYPEHINT:
-		NUMBER_SIGN* CIRCUMFLEX ( 'ints' | 'floats' | 'longs' | 'doubles' | 'objects' | NAME | STRING )*
-	;
-	
-fragment
-NAME:   SYMBOL_HEAD SYMBOL_REST* (':' SYMBOL_REST+)*
-    ;
-
-fragment
-SYMBOL_HEAD:   
-        'a'..'z' | 'A'..'Z' | '*' | '+' | '!' | '-' | '_' | '?' | '>' | '<' | '=' | '$'
-        // other characters will be allowed eventually, but not all macro characters have been determined
-    ;
-
-fragment
-SYMBOL_REST:
-        SYMBOL_HEAD
-    |   '0'..'9' // Done this because a strange cannot find matchRange symbol occured when compiling the parser
-    |   '.' // multiple successive points is allowed by the reader (but will break at evaluation)
-    |   NUMBER_SIGN // FIXME normally # is allowed only in syntax quote forms, in last position
-    ;
 
 literal:
-        STRING //-> template(it={$STRING.text}) "<span style='color: red ; '>$it$</span>" 
+        STRING 
     |   NUMBER
     |   CHARACTER
     |   NIL
@@ -106,26 +85,7 @@ SYNTAX_QUOTE:
         '`'
     ;
     
-UNQUOTE_SPLICING:
-        '~@'
-    ;
-    
-UNQUOTE:    
-        '~'
-    ;
-    
-COMMENT:
-        ';' ~('\r' | '\n')* ('\r'? '\n')? {$channel=HIDDEN;}  //{skip();} // FIXME should use NEWLINE but NEWLINE has a problem I don't understand for the moment
-    ;
-SPACE:  (' '|'\t'|','|'\r'|'\n')+ {$channel=HIDDEN;} // FIXME should use NEWLINE but NEWLINE has a problem I don't understand for the moment
-    ;
 
-LAMBDA_ARG:
-        '%' '1'..'9' '0'..'9'*
-    |   '%&'
-    |   '%'
-    ;
-    
 /*
  * Parser part
  */
@@ -134,7 +94,6 @@ file:
         ( form  { System.out.println("form found"); }  )*
     ;
     
-// Note : dispatch macros are hardwired in clojure
 form	:	   
 	 {this.inLambda}? LAMBDA_ARG
     |    literal // Place literal first to make nil and booleans take precedence over symbol (impossible to 
@@ -156,14 +115,6 @@ macroForm:
     |	{ this.syntaxQuoteDepth > 0 }? unquoteForm
     ;
     
-dispatchMacroForm:   
-        REGEX_LITERAL
-    |   varQuoteForm
-    |   {!this.inLambda}? lambdaForm // contraction for anonymousFunction
-    ;
-    
-list:   o=OPEN_PAREN form * c=CLOSE_PAREN { parensMatching.put(Integer.valueOf(o.getTokenIndex()), Integer.valueOf(c.getTokenIndex())); parensMatching.put(Integer.valueOf(c.getTokenIndex()), Integer.valueOf(o.getTokenIndex())); }
-    ;
     
 vector:  LEFT_SQUARE_BRACKET form* RIGHT_SQUARE_BRACKET
     ;
@@ -171,38 +122,6 @@ vector:  LEFT_SQUARE_BRACKET form* RIGHT_SQUARE_BRACKET
 map:    LEFT_CURLY_BRACKET (form form)* RIGHT_CURLY_BRACKET
     ;
     
-quoteForm
-@init  { this.syntaxQuoteDepth++; }
-@after { this.syntaxQuoteDepth--; }
-    :  APOSTROPHE form
-    ;
-
-metaForm:   CIRCUMFLEX form
-    ;
-    
-derefForm:  COMMERCIAL_AT form
-    ;
-    
-syntaxQuoteForm
-@init  { this.syntaxQuoteDepth++; }
-@after { this.syntaxQuoteDepth--; }
-    :
-        SYNTAX_QUOTE form
-    ;
-    
-unquoteForm
-@init  { this.syntaxQuoteDepth--; }
-@after { this.syntaxQuoteDepth++; }
-    :
-        UNQUOTE form
-    ;
-    
-unquoteSplicingForm
-@init  { this.syntaxQuoteDepth--; }
-@after { this.syntaxQuoteDepth++; }
-    :
-        UNQUOTE_SPLICING form
-    ;
     
 set:    NUMBER_SIGN LEFT_CURLY_BRACKET form* RIGHT_CURLY_BRACKET
     ;
@@ -211,19 +130,6 @@ metadataForm:
         NUMBER_SIGN CIRCUMFLEX (map | SYMBOL|KEYWORD|STRING)
     ;
 
-varQuoteForm:
-        NUMBER_SIGN APOSTROPHE form
-    ;
-
-lambdaForm
-@init {
-this.inLambda = true;
-}
-@after {
-this.inLambda = false;
-}
-    : NUMBER_SIGN list
-    ;
 ````
 
 <!--[github/sad](https://github.com/arrdem/sad/blob/master/src/me/arrdem/sad/grammars/bnf.clj) -->
