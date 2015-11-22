@@ -1,4 +1,10 @@
-
+---
+title: Plain Text Workflow
+author: Dennis Tenen, Grant Wythoff
+date: January 20, 2014
+bibliography: biblio.bib
+csl: mla.csl
+---
 # 14. Anonymous functions
 
 As a functional language, Clojure uses a special form to build anonymous, or unnamed, functions ([@fogus2014joy]). 
@@ -20,3 +26,6 @@ usr> (#(* 3 %) 2)
 ;; The % implicitly declares the accepted argument
 ```
 Adapted from [@koan] and [@fogus2014joy].
+
+
+# References
