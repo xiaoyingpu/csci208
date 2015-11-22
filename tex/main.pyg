@@ -1,5 +1,0 @@
-clojure-noob.core> (greeting deutsch-map)
-"Hallo!"
-clojure-noob.core> (greeting espano-map)
-IllegalArgumentException Kein Espano
-clojure-noob.core/eval3459/fn--3460 (core.clj:27)
