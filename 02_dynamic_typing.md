@@ -4,7 +4,7 @@
 Clojure, like Lisp, is dynamically typed[1]. Lisp was a pioneer in adopting dynamic typing [Paul Graham](http://www.paulgraham.com/icad.html). There are no mutable states in Clojure ([@fogus2014joy]), so the following example is a work-around to illustrate dynamic typing.
 
 
-``` clj
+``` clojure
 usr=> (defn foo [x y] (/ x y)) ;; x / y
 usr=> (foo \a 1) ;; char 'a' and int 1
 ClassCastException java.lang.Character cannot be 
