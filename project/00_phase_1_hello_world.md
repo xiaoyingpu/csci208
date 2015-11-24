@@ -1,7 +1,7 @@
-Hello World
-===========
+# Phase 1: Hello World
 
-``` clj
+
+``` clojure
 (ns p1.core
   (:gen-class))
 
@@ -19,7 +19,9 @@ Compile and run:
 make sure that you have started the project with `lein`, and then do `$ lein run` in the terminal.
 
 Output:
-````Hello, World!````
+````
+Hello, World!
+````
 
 
 `lein`, Leiningen, is [here](http://leiningen.org).

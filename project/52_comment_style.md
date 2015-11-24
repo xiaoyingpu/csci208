@@ -4,11 +4,10 @@
 Clojure has two ways of commenting:
 
 1.  commenting out a line with `;`
-
 2.  commenting out a form with `#_`
 
 
-``` clj
+``` clojure
 ; This is a comment
 ;; but using two of ;'s is more common
 user=> (if true (:answer) (+ 1 41))

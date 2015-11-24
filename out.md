@@ -5,38 +5,29 @@
 Phase 2: Paradigms and Features
 ===============================
 
-<span>*What paradigms is your language? What features of the language support your answer? Match specific features to specific paradigms.* </span>
+What paradigms is your language? What features of the language support your answer? Match specific features to specific paradigms.
 
-**Answers**
-
-------------------------------------------------------------------------
+## Answers
 
 Clojure is a dynamic languange, and it belongs to the following paradigms: functional, (beyond) object-oriented and concurrent programming.
 
-**Dynamic**
+### Dynamic 
 
 Clojure, like its parent Lisp, is first and foremost a dynamic language . Our text may not have listed being dynamic as one of the paradigms, but it is one of the most important features of Clojure. A dynamic language determines many more things at run-time than in compile time .
 
 -   Clojure does not require type declaration .
-
 -   Clojure has an `eval` function to load code for execution in run-time, a feature most static languages lack .
-
 -   REPL, Read-Eval-Print-Loop, is the primary interface for programming in Clojure. It is a console for entering and executing commands .
-
 -   Clojure is compiled, but REPL automatically “compiles to JVM bycode on the fly” .
 
-**Functional programming**
+### Functional programming
 
 According to the textbook, a functional language is based on functions over types such as lists and trees. Clojure is a dialect of Lisp, a classical functional language. Clojure is suited for developing significant programs without having mutable variables, as it possesses, but not limited to, the following characteristics:
 
 1.  Clojure functions are <span>*first-class functions*</span>. Like the more familiar integer or boolean objects, Clojure functions can be created, stored, used as function arguments and returned by other functions . In addition, it is easy to use high order functions like `map, reduce, filter` .
-
 2.  Clojure has a fine selection of <span>*immutable*</span>, persistent data structures. Imperative languages feature the use of variables and manipulation of memory contents. By comparison, the values in Clojure is immutable ; a var in Clojure is the closest thing to a variable in imperative languages .
-
 3.  <span>*Lazy eval*</span>: Clojure sequences are lazy, meaning that the elements are only computed when needed. It is thus possible to create list of infinite length .
-
 4.  <span>*Anonymous functions*</span>: the keyword `fn` mentioned above created a function without a name. It takes a <span>*special form*</span> in Clojure syntax, because it is not defined in terms of functions, types or macros .
-
 5.  <span>*Recursive looping*</span>: since Clojure does not employ mutable local variable, its implementation of <span>*for*</span> or <span>*while*</span> loop is different from imperative languages with changing states .
 
 **Beyond Object-oriented**
