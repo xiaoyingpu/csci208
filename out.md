@@ -646,5 +646,5 @@ Adapted from
 
 
 
-[15] http://clojure.org/multimethods
+[15] 
 

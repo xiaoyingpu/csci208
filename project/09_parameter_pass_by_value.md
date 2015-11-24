@@ -5,12 +5,12 @@
 
 ### By value
 
-Like Java, Clojure passes arguments by value; in the case of references, they are passed by references pointing to objects (see [@pass]). One way to test it is to use `identical?`, which decides if the two arguments are the same object (see [@empty]).
+Like Java, Clojure passes arguments by value; in the case of references, they are passed by references pointing to objects [@pass]. One way to test it is to use `identical?`, which decides if the two arguments are the same object [@empty].
 
 
 
 
-``` clj
+``` clojure
 ;; define a global z with a vector
 usr => (def z [1])
 #'clojure-noob.core/z

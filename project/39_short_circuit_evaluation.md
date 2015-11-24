@@ -14,6 +14,4 @@ true
 ;; (and false ....) short circuits
 ```
 
-See[12].
-
-[12] <http://stackoverflow.com/questions/8190417/does-clojure-have-short-circuit-logic>
+See[stackoverflow (link)](http://stackoverflow.com/questions/8190417/does-clojure-have-short-circuit-logic).

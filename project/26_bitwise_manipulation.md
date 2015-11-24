@@ -1,8 +1,9 @@
 # 26. Can you directly access or manipulate the bits of an integer value? What operations are possible?
 
-Yes. 
+## Yes. 
 
-According to Clojure’s official site[8], it can do 
+According to [clojure.org (link)](http://clojure.org/data_structures), it can do 
+
 * bit-and
 * bit-or
 * bit-xor
@@ -13,7 +14,7 @@ According to Clojure’s official site[8], it can do
 The following example uses bitwise and & bitwise shift right.
 
 
-``` clj
+``` clojure
 ;; from a CSCI 206 lab
 ;; get_byte - Extract byte n from word x
 ;; example: get_byte(0x12345678, 1) = 0x56
@@ -27,6 +28,6 @@ user> (get-byte 0xdeadbeef 0)
 "0xef"	;; endianness
 ```
 
-See [clojuredoc](https://clojuredocs.org/clojure.core/bit-shift-right).
+See [clojuredoc, bit-shift-right (link)](https://clojuredocs.org/clojure.core/bit-shift-right).
 
-[8] <http://clojure.org/data_structures>
+

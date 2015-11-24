@@ -1,6 +1,6 @@
 # 24. Is string a primitive type? 
 
-(In C++ it is, in Java, C, Haskell, ... it is not). What math operations can you do on strings? (s+s, s*3) What other operations are provided for strings? (none, substring, index of). Is there a concept of a terminating character like the ’\0’ in C?
+(In C++ it is, in Java, C, Haskell, ... it is not). What math operations can you do on strings? (s+s, s*3) What other operations are provided for strings? (none, substring, index of). Is there a concept of a terminating character like the NULL in C?
 
 
 ## Answers
@@ -14,6 +14,8 @@
 	* index-of
 	* subs (substring)
 * No there is no such thing as not having null-terminated the String and the program seg faults.
+
+## Exmaple of substring
 
 ```clojure
 user> (subs "01234" 1 3)

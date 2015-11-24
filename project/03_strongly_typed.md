@@ -1,9 +1,9 @@
-# 3. untyped vs weakly typed vs strongly typed
+# 3. Untyped vs weakly typed vs strongly typed
 
 Clojure is strongly typed, at least stronger than Java; see the tests below.
 
 
-``` clj
+``` clojure
 ;; Clojure is typed, see the cast exception
 usr=> (/ \a 1)
 ClassCastException java.lang.Character cannot be cast to
@@ -18,5 +18,6 @@ usr=> (/ 1 4.2)
 ;; Coerced 1, an int, into floating point
 ;; => weaker than Ada
 ```
+
 
 

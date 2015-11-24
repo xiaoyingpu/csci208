@@ -41,6 +41,7 @@ Many functions, same name. In Clojure, a dispatch function, `greeting` in this c
 (def espano-map {"id" "3" "language" "Espano"})
 ```
 Output:
+
 ```clojure
 clojure-noob.core> (greeting deutsch-map)
 "Hallo!"

@@ -1,3 +1,0 @@
-# 31. What is the order or precedence for all the math operators? relational operators? any other operators? This requires an answer but not code or an argument. It definitely requires a reference.
-
-This question is not a problem in Clojure; it does not have precedence rules because it is fully parenthesized (see [clojure programming, book](https://www.safaribooksonline.com/library/view/clojure-programming/9781449310387/ch01s05.html)).

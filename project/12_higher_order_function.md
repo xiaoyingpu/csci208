@@ -1,4 +1,4 @@
-# 12. higher order functions. Haskell supports these in many ways. C lets you pass functions into a function which is higher order but that's it.
+# 12. Higher order functions. Haskell supports these in many ways. C lets you pass functions into a function which is higher order but that's it.
 
 A higher order function is defined such that it takes functions as arguments, and / or it returns a function as a result [@fogus2014joy] (Ch.7.1.2).
 
@@ -87,3 +87,6 @@ user=> (filter (complement odd?) (range 41 43))
 ```
 
 Definitions adapted from [clojuredoc](https://clojuredocs.org).
+
+
+----------

@@ -95,3 +95,21 @@
   (or 
    true
    (do (println "this prints if true or _ is evaluated"))))
+
+
+
+(def ^:dynamic x (java.awt.Point. 1 1))
+(def ^:dynamic y x)
+
+
+(defn aliaspt []
+ (. y setLocation 2 2)
+ (. x toString))
+
+
+;; or is this a scoping answer...
+(defn aliasing []
+  (binding [x 100]
+    (println x y)
+    (binding [y x]
+      (+ x y))))

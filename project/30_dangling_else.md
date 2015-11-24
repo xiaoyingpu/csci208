@@ -1,5 +1,7 @@
 # 30. What about dangling else? Is it a problem? If yes, how does it handle it? if not, why is it not a problem? It is a problem in both C and Java but not in Haskell
 
+## Answer: no
+
 Since Clojure is fully-paranthesized, there is no such problem as dangling else; every `else` knows which `if` it belongs to.
 
 ```clojure

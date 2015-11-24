@@ -3,7 +3,7 @@
 In Clojure, operators are plain functions [@fogus2014joy] (p. 13).
 Overloading is possible for both methods and operators. In practise, it
 is better to use multimethods than simply overloading functions,
-especially basic operators like +[^15].
+especially basic operators like `+` (see [clojure.org](http://clojure.org/multimethods)).
 
 
 ```clojure

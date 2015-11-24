@@ -1,4 +1,4 @@
-# 8. static and/or dynamic scope.
+# 8. Static and/or dynamic scope.
 
 Clojure supports both static and dynamic scopes [@fogus2014joy].
 
@@ -7,7 +7,7 @@ Clojure supports both static and dynamic scopes [@fogus2014joy].
 `let` defines locals of static scope.
 
 
-``` clj
+``` clojure
 (def x 3)           ;; binds global var x to 3
 ;; (let [bindings*] exprs*)
 ;; symbols are resolved within 
@@ -20,7 +20,7 @@ Clojure supports both static and dynamic scopes [@fogus2014joy].
 ```
 Output:
 
-``` clj
+``` clojure
 42
 1
 3
@@ -41,7 +41,7 @@ From [@fogus2014joy](Ch.10.6.4).
 It is not within the scope of this report to present the advantage of dynamic scoping in a concurrent context. The code examples are either not illustrative or broken in [clojuredoc](https://clojuredocs.org/clojure.core/binding) due to API change among different versions of Clojure.
 
 
-``` clj
+``` clojure
 (def y 3)
 #'clojure-noob.core/y
 usr => (binding [y 3] (println y))
@@ -59,3 +59,6 @@ usr => (println x)
 ```
 
 From [clojuredoc](https://clojuredocs.org/clojure.core/binding) and [@fogus2014joy](Ch.10.6).
+
+
+--------------

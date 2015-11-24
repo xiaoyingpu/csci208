@@ -1,7 +1,7 @@
-# 2. static vs dynamic typing. duck typed?
+# 2. Static vs dynamic typing. duck typed?
 
 
-Clojure, like Lisp, is dynamically typed[1]. Lisp was a pioneer in adopting dynamic typing [Paul Graham](http://www.paulgraham.com/icad.html). There are no mutable states in Clojure ([@fogus2014joy]), so the following example is a work-around to illustrate dynamic typing.
+Clojure, like Lisp, is dynamically typed[1]. Lisp was a pioneer in adopting dynamic typing ([Paul Graham's website](http://www.paulgraham.com/icad.html)). There are no mutable states in Clojure [@fogus2014joy], so the following example is a work-around to illustrate dynamic typing.
 
 
 ``` clojure
@@ -20,3 +20,6 @@ As shown in the code, Clojure is __duck typed__ as well.
 
 
 [1] <https://www.quora.com/Is-Scala-faster-than-Clojure>. Michael Klishin seems to be an experienced developer of Clojure.
+
+
+

@@ -8,11 +8,14 @@ As a functional language, Clojure uses a special form to build anonymous, or unn
   (* 3 n))            ;; return value = 3 * n
  2)                  ;; passing in param
 ```
-Output
+
+Output:
+
 
 ```
 6                       ;; return value
 ```
+
 There is also a reader feature to define in-place functions using `#()`.
 
 
@@ -23,4 +26,3 @@ usr> (#(* 3 %) 2)
 Adapted from [@koan] and [@fogus2014joy].
 
 
-# References
