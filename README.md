@@ -8,7 +8,7 @@ A semester-long project: pick up a new language and answer questions.
 __Note:__ 
 
 - the bibtex citations are in `biblio.bib`; they are cited as `[@citekey2015]`.
-- if you have the Haskell and LaTeX dependencies figured out, do `pandoc -s -S --bibliography biblio.bib --filter pandoc-citeproc *.md -o report.pdf` will give a nice PDF of the whole thing.
+- if you have the Haskell and LaTeX dependencies figured out, do `pandoc -s *.md --bibliography biblio.bib --csl apa.csl --toc  -o out.pdf` will give a nice PDF of the whole thing.
 
 
 
