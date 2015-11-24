@@ -2,5 +2,5 @@
 
 ## Answer
 
-Prefix 100% of the time, all the time! All function calls, unary, binary operators etc., are all prefix.
+Prefix always. All function calls, unary, binary operators etc., are all prefix [@fogus2014joy].
 

@@ -6,7 +6,7 @@ Clojure has two types of flow control: normal and exceptional (see [here](https:
 *  Exceptional circumstances include assert and try-catch.
 
 ## if
-``` clj
+``` clojure
 ;; if 
 user=> (if nil "not" "is nil")
 "is nil"
@@ -15,7 +15,7 @@ user=> (if nil "not" "is nil")
 
 ## when
 
-``` clj
+``` clojure
 ;; An example for when
 (defn train ;; define a function, train
     [x]     ;; that takes one argument
@@ -27,7 +27,7 @@ user=> (if nil "not" "is nil")
 ```
 Lovely output:
 
-``` clj
+``` clojure
 clojure-noob.core> (train 3)
 Choo choo!
 Choo choo!
