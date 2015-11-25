@@ -23,6 +23,6 @@ Since Clojure has a very nice read-evaluate-print-loop (REPL), separate `clj` fi
 5. Enter code at the prompt
 
 
-## Good-to-have:
+## Good-to-have
 
 [braveclojure](http://www.braveclojure.com/basic-emacs/) teaches how to set up your emacs to work with Clojure conveniently.

@@ -12,7 +12,7 @@ As a functional language, Clojure uses a special form to build anonymous, or unn
 Output:
 
 
-```
+```clojure
 6                       ;; return value
 ```
 
