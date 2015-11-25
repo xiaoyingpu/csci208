@@ -5,7 +5,7 @@
 Clojure does short-circuit evaluation for `and` and `or`. Google searches yielded no trace of short-circuiting being optional.
 
 
-``` clj
+``` clojure
 user> (or true 
     (do (println "no short-circuit")))
 true
