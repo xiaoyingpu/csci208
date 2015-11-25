@@ -21,16 +21,16 @@ Output:
 
 ```clojure
 user> (funk)
-this else knows....
+this else knows.... ;; to whom it belongs
 nil
 ```
 
 
 ## More about `if`
 
-Since Clojure has all expressions, `if` always returns something. The argument in case of `else` condition is optional. Specifically, if nothing is supplied to the `else` condition, Clojure defaults to return nil. It is a problem in that user does not have to specify anything for the dangling else; on the other hand, something is always returned.
+The argument in case of `else` condition is optional. Since Clojure has all expressions, `if` always returns something. If nothing is supplied to the `else` condition, Clojure defaults to return nil. 
 
-``` clj
+```clojure
 ;; prototype: (if test then else?)
 ;; then clause = "try dangling"
 ;; else? is missing here
