@@ -4,6 +4,8 @@
 
 __Note:__ this work takes advantage of Clojure's REPL environment for ease of testing, so `clj` files are not provided.
 
+This project is also on [github](http://xiaoyingpu.github.io/csci208/).
+
 \newpage
 
 ![For the brave and true](c.png)
