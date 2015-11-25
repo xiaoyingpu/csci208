@@ -12,7 +12,7 @@
   <body>
     <section class="page-header">
       <h1 class="project-name">CSCI 208 - Programming Languages</h1>
-      <h2 class="project-tagline">Educational questions answered to better understand clojure</h2>
+      <h2 class="project-tagline">Educational questions answered to better understand a language. I chose Clojure.</h2>
       <a href="https://github.com/xiaoyingpu/csci208" class="btn">View on GitHub</a>
       <a href="https://github.com/xiaoyingpu/csci208/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/xiaoyingpu/csci208/tarball/master" class="btn">Download .tar.gz</a>
@@ -24,13 +24,24 @@
 
 <p><code>bucknell/csci208</code></p>
 
-<p>A semester-long project: pick up a new language and answer questions.</p>
+<p>A semester-long project: pick up a new language and answer questions (~30).</p>
+
+<h2>
+<a id="the-report" class="anchor" href="#the-report" aria-hidden="true"><span class="octicon octicon-link"></span></a>The report</h2>
+
+<ul>
+<li>The PDF under <code>project</code> folder.</li>
+<li>if you have the Haskell and LaTeX dependencies figured out, do </li>
+</ul>
+
+<blockquote>
+<p><code>pandoc -s *.md --bibliography biblio.bib --csl apa.csl --toc  -o out.pdf</code> </p>
+</blockquote>
 
 <p><strong>Note:</strong> </p>
 
 <ul>
-<li>the bibtex citations are all broken in the markdown files. Please search for the citation keys within the project.</li>
-<li>if you have the Haskell and LaTeX dependencies figured out, do <code>pandoc -s -S --bibliography biblio.bib --filter pandoc-citeproc *.md -o report.pdf</code> will give a nice PDF of the whole thing.</li>
+<li>the bibtex citations are in <code>biblio.bib</code>; they are cited as <code>[@citekey2015]</code> in the markdown files.</li>
 </ul>
 
 <h2>
@@ -48,7 +59,7 @@
 </ol>
 
 <h2>
-<a id="good-to-have" class="anchor" href="#good-to-have" aria-hidden="true"><span class="octicon octicon-link"></span></a>Good-to-have:</h2>
+<a id="good-to-have" class="anchor" href="#good-to-have" aria-hidden="true"><span class="octicon octicon-link"></span></a>Good-to-have</h2>
 
 <p><a href="http://www.braveclojure.com/basic-emacs/">braveclojure</a> teaches how to set up your emacs to work with Clojure conveniently.</p>
 
