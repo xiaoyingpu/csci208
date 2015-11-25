@@ -2,14 +2,20 @@
 
 `bucknell/csci208`
 
-A semester-long project: pick up a new language and answer questions.
+A semester-long project: pick up a new language and answer questions (~30).
+
+
+## The report
+
+- The PDF under `project` folder.
+- if you have the Haskell and LaTeX dependencies figured out, do 
+
+> `pandoc -s *.md --bibliography biblio.bib --csl apa.csl --toc  -o out.pdf` 
 
 
 __Note:__ 
 
-- the bibtex citations are in `biblio.bib`; they are cited as `[@citekey2015]`.
-- if you have the Haskell and LaTeX dependencies figured out, do `pandoc -s *.md --bibliography biblio.bib --csl apa.csl --toc  -o out.pdf` will give a nice PDF of the whole thing.
-
+- the bibtex citations are in `biblio.bib`; they are cited as `[@citekey2015]` in the markdown files.
 
 
 ## How to run code
