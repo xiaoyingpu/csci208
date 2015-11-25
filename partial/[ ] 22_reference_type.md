@@ -5,7 +5,6 @@
 ## Answer:
 
 
-Clojure uses refs to coordinate _identities_ in a concurrent setting.
+Clojure uses refs to coordinate _identities_ in a concurrent setting [@emerick2012clojure].
 
 
-From Clojure Programming, P. 180. (Emerick, Chas, Brian Carper, and Christophe Grand. Clojure programming. " O'Reilly Media, Inc.", 2012.)

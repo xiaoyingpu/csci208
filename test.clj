@@ -113,3 +113,5 @@
     (println x y)
     (binding [y x]
       (+ x y))))
+(defn multarray []
+  (pprint (make-array Integer/TYPE 4 2)))

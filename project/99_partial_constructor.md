@@ -27,3 +27,4 @@ user> (map (partial #(Animal. "a name" %)) [1 2 3])
  #object[user.Animal 0x4ec5bfca "user.Animal@4ec5bfca"])
 ```
 
+# References
