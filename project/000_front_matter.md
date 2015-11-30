@@ -31,6 +31,9 @@ Clojure has a very nice read-evaluate-print-loop (REPL). _Separate `clj` files a
 [braveclojure](http://www.braveclojure.com/basic-emacs/) teaches how to set up your emacs to work with Clojure conveniently. You can compile Clojure code and run REPL within emacs.
 
 
+![Emacs with REPL on the lower pane](resources/emacs.png)
+
+
 
 \newpage
 
