@@ -25,6 +25,15 @@ user> (class Animal)
 java.lang.Class
 
 ;; Usage
-user> (.name Animal)
+
+(deftype Animal [name age])
+(def dog (Animal. "Worf" 10))
 ```
 
+Output:
+
+
+```clojure
+user> (.name dog)
+"Worf"  ;; success
+```
