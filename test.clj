@@ -118,4 +118,7 @@
 
 
 
+;; deftype example
 
+(deftype Animal [name age])
+(def dog (Animal. "Worf" 10))
