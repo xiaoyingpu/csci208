@@ -12,7 +12,7 @@ Both `deftype` and `defrecord` generate _named_ classes dynamically.
 
 
 
-## Example usage of `deftype`:
+## Example usage of deftype:
 
 ```clojure
 
