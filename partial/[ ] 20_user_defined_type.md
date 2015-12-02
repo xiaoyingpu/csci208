@@ -14,7 +14,17 @@ Both `deftype` and `defrecord` generate _named_ classes dynamically.
 
 ## Example usage of deftype:
 
+
 ```clojure
+;; defining the type
+;; constructor takes two parameters, name & age
+(deftype Animal [name age])
 
+;; check: a java class indeed
+user> (class Animal)
+java.lang.Class
 
+;; Usage
+user> (.name Animal)
 ```
+
