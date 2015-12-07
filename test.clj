@@ -11,6 +11,9 @@
          (bit-shift-right x (* 8 n)) 
          0xff)))
 
+
+(defn get-byte2 [x n] (format "0x%x" (bit-and (bit-shift-right x (* 8 n)) 0xff)))
+
 (def z 3)
 
 
@@ -130,3 +133,5 @@
     (catch ArithmeticException e "No dividing by zero!")
     (catch Exception e (str "You are so bad " (.getMessage e)))
     (finally (println "returning... ")))])
+
+
