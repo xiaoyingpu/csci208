@@ -122,3 +122,11 @@
 
 (deftype Animal [name age])
 (def dog (Animal. "Worf" 10))
+
+
+(defn throw-catch [f]
+  [(try
+    (f)
+    (catch ArithmeticException e "No dividing by zero!")
+    (catch Exception e (str "You are so bad " (.getMessage e)))
+    (finally (println "returning... ")))])
